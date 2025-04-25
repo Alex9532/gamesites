@@ -1,0 +1,768 @@
+"use strict";
+(self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([
+  [7306], {
+    8115: (e, s, i) => {
+      i.r(s), i.d(s, {
+        default: () => A
+      });
+      var t = i(17402),
+        o = i(80243),
+        n = i(65676),
+        r = i(34164),
+        l = i(8935),
+        a = i(56832),
+        p = i(42891),
+        c = i(72925),
+        u = i(40890),
+        d = i(31262),
+        m = i(51508),
+        h = i(95901);
+      const v = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-Shimmer-tsx",
+          isReady(e) {
+            const s = this.resolve(e);
+            return !0 === this.resolved[s] && !!i.m[s]
+          },
+          importAsync: () => Promise.all([i.e(4438), i.e(8935)]).then(i.bind(i, 98250)),
+          requireAsync(e) {
+            const s = this.resolve(e);
+            return this.resolved[s] = !1, this.importAsync(e).then((e => (this.resolved[s] = !0, e)))
+          },
+          requireSync(e) {
+            const s = this.resolve(e);
+            return i(s)
+          },
+          resolve() {
+            return 98250
+          }
+        }),
+        z = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-TileLabel-tsx",
+          isReady(e) {
+            const s = this.resolve(e);
+            return !0 === this.resolved[s] && !!i.m[s]
+          },
+          importAsync: () => Promise.all([i.e(4810), i.e(8371), i.e(9008)]).then(i.bind(i, 44237)),
+          requireAsync(e) {
+            const s = this.resolve(e);
+            return this.resolved[s] = !1, this.importAsync(e).then((e => (this.resolved[s] = !0, e)))
+          },
+          requireSync(e) {
+            const s = this.resolve(e);
+            return i(s)
+          },
+          resolve() {
+            return 44237
+          }
+        }),
+        y = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-TileVideo-tsx",
+          isReady(e) {
+            const s = this.resolve(e);
+            return !0 === this.resolved[s] && !!i.m[s]
+          },
+          importAsync: () => Promise.resolve().then(i.bind(i, 57190)),
+          requireAsync(e) {
+            const s = this.resolve(e);
+            return this.resolved[s] = !1, this.importAsync(e).then((e => (this.resolved[s] = !0, e)))
+          },
+          requireSync(e) {
+            const s = this.resolve(e);
+            return i(s)
+          },
+          resolve() {
+            return 57190
+          }
+        });
+
+      function g({
+        useAltImg: e = !1,
+        data: s,
+        lazy: i,
+        isMobile: t,
+        list: o,
+        idx: n,
+        componentKey: r,
+        isMapped: a
+      }) {
+        const {
+          image: p,
+          imageAlt: c
+        } = s, u = !a && i;
+        return (0, l.xu)({
+          list: o,
+          idx: n,
+          image: e ? c : p,
+          alt: s.title,
+          lazy: u,
+          componentKey: r,
+          isMobile: t
+        })
+      }
+      const b = {
+          width: 628,
+          quality: 6,
+          blur: 12
+        },
+        x = {
+          width: 408,
+          quality: 10,
+          blur: 5
+        };
+
+      function M(e, s) {
+        const {
+          width: i,
+          quality: t,
+          blur: o
+        } = s ? x : b;
+        return (0, u.pN)({
+          width: i,
+          image: {
+            path: e
+          },
+          quality: t,
+          blur: o
+        })
+      }
+
+      function A({
+        className: e,
+        data: s = {
+          id: 0,
+          image: {
+            path: ""
+          },
+          isNew: !1,
+          slug: "",
+          title: "",
+          url: ""
+        },
+        alwaysShowTitle: i,
+        list: o,
+        idx: u,
+        componentKey: b,
+        label: x,
+        lazy: A = !0,
+        isMobile: $ = !1,
+        onClick: f,
+        panelSection: w,
+        trackingIndex: N
+      }) {
+        const _ = (0, t.useRef)(null),
+          [k, K] = (0, t.useState)(!1),
+          S = (0, n.d4)(p.Rd),
+          {
+            isMapped: T
+          } = (0, l.hS)({
+            list: o,
+            idx: u,
+            componentKey: b,
+            isMobile: $
+          }),
+          q = (null == s ? void 0 : s.imageAlt) && S >= .5,
+          D = (0, t.useMemo)((() => g({
+            useAltImg: q,
+            data: s,
+            lazy: A,
+            isMobile: $,
+            list: o,
+            idx: u,
+            componentKey: b,
+            isMapped: T
+          })), [q]),
+          L = (0, t.useMemo)((() => !$ && (null == s ? void 0 : s.animatedThumbnail)), [$, s]),
+          R = (0, t.useMemo)((() => {
+            if (!L) return null;
+            const e = null == s ? void 0 : s.animatedThumbnail;
+            return (0, h.Y)(y, {
+              videoUrl: e,
+              videoSize: "3x3"
+            })
+          }), [L, s]),
+          Y = (0, t.useMemo)((() => M(s.image.path, $)), [s.image.path, $]),
+          C = (0, t.useMemo)((() => (0, d.p)({
+            label: x,
+            isNew: s.isNew
+          })), [x, s.isNew]),
+          P = 29160 === s.id,
+          E = (0, t.useCallback)((() => {
+            K(!0)
+          }), []),
+          O = (0, t.useCallback)((() => {
+            K(!1)
+          }), []),
+          I = (0, t.useCallback)((e => {
+            e.preventDefault(), f && f();
+            const {
+              pageY: i
+            } = e, t = N || u;
+            (0, a.D)({
+              id: s.id,
+              image: q ? "b" : "a",
+              path: s.url,
+              panelSection: w,
+              index: t,
+              type: "game",
+              list: o,
+              y: i
+            }), (0, c.A)().push(s.url)
+          }), [f, s.id, q, s.url, w, u, N, o]),
+          U = (0, t.useMemo)((() => (0, r.$)("summaryTile", m.summaryTile, m.summaryTile_fixedAspectRatio, i && m.summaryTile_showTitle, T && m.summaryTile_container, e)), [i, T, e]),
+          W = (0, t.useMemo)((() => A ? {} : {
+            backgroundImage: `url(${Y})`
+          }), [A, Y]);
+        return (0, h.FD)("a", {
+          className: U,
+          ref: _,
+          href: s.url,
+          onClick: I,
+          onMouseEnter: L ? E : void 0,
+          onMouseLeave: L ? O : void 0,
+          style: W,
+          children: [!P && D, (0, h.Y)("span", {
+            className: (0, r.$)(m.summaryTile__title, "global-cq-title"),
+            children: s.title
+          }), P && D && (0, h.Y)(v, {
+            sourcePicture: D,
+            destinationPicture: (0, l.xu)({
+              list: o,
+              idx: u,
+              image: {
+                ...s.image,
+                path: "7a35d4a468a820f1dc72b9ad22e9aeec.jpg"
+              },
+              alt: s.title,
+              lazy: !1,
+              componentKey: b,
+              isMobile: $
+            })
+          }), L && k && R, C && (0, h.Y)(z, {
+            label: C
+          })]
+        })
+      }
+    },
+    8935: (e, s, i) => {
+      i.d(s, {
+        hS: () => p,
+        xu: () => c
+      });
+      var t = i(73421),
+        o = i(40890),
+        n = "cmwhPovN5VyaNFLxpR8k",
+        r = i(95901);
+      const l = [0, 94, 204, 314],
+        a = {
+          home: {
+            mobile: {
+              "most-played": {
+                0: {
+                  size: 2
+                },
+                1: {
+                  size: 2,
+                  responsive: [
+                    [3, 8]
+                  ]
+                },
+                2: {
+                  size: 2,
+                  responsive: [
+                    [3, 5],
+                    [2, 6]
+                  ]
+                },
+                3: {
+                  size: 2,
+                  responsive: [
+                    [3, 6],
+                    [2, 8]
+                  ]
+                },
+                4: {
+                  size: 1,
+                  responsive: [
+                    [2, 5],
+                    [3, 6],
+                    [2, 8]
+                  ]
+                },
+                5: {
+                  size: 1,
+                  responsive: [
+                    [2, 5],
+                    [3, 6]
+                  ]
+                },
+                6: {
+                  size: 1,
+                  responsive: [
+                    [3, 5],
+                    [2, 6],
+                    [3, 8]
+                  ]
+                },
+                7: {
+                  size: 1,
+                  responsive: [
+                    [2, 8]
+                  ]
+                },
+                8: {
+                  size: 1,
+                  responsive: [
+                    [2, 8]
+                  ]
+                },
+                9: {
+                  size: 1,
+                  responsive: [
+                    [2, 8]
+                  ]
+                },
+                10: {
+                  size: 1,
+                  responsive: [
+                    [2, 8]
+                  ]
+                }
+              }
+            },
+            desktop: {
+              "most-played": {
+                0: {
+                  size: 3
+                },
+                1: {
+                  size: 2,
+                  responsive: [
+                    [3, 9]
+                  ]
+                },
+                2: {
+                  size: 2,
+                  responsive: [
+                    [3, 14]
+                  ]
+                },
+                3: {
+                  size: 2,
+                  responsive: [
+                    [3, 17]
+                  ]
+                },
+                4: {
+                  size: 2
+                },
+                5: {
+                  size: 3,
+                  responsive: [
+                    [2, 9]
+                  ]
+                },
+                6: {
+                  size: 2
+                },
+                7: {
+                  size: 2
+                },
+                8: {
+                  size: 3,
+                  responsive: [
+                    [2, 9]
+                  ]
+                },
+                9: {
+                  size: 2
+                },
+                10: {
+                  size: 2,
+                  responsive: [
+                    [3, 9],
+                    [2, 12]
+                  ]
+                },
+                11: {
+                  size: 3,
+                  responsive: [
+                    [2, 11],
+                    [3, 14],
+                    [2, 17]
+                  ]
+                },
+                12: {
+                  size: 3,
+                  responsive: [
+                    [2, 11]
+                  ]
+                },
+                13: {
+                  size: 2,
+                  responsive: [
+                    [3, 11],
+                    [2, 12]
+                  ]
+                },
+                14: {
+                  size: 2
+                },
+                15: {
+                  size: 2,
+                  responsive: [
+                    [3, 14],
+                    [2, 17]
+                  ]
+                },
+                16: {
+                  size: 1,
+                  responsive: [
+                    [2, 1],
+                    [1, 12],
+                    [2, 14]
+                  ]
+                },
+                17: {
+                  size: 1,
+                  responsive: [
+                    [2, 1],
+                    [1, 12],
+                    [2, 17]
+                  ]
+                },
+                18: {
+                  size: 1,
+                  responsive: [
+                    [2, 1],
+                    [1, 11],
+                    [2, 17]
+                  ]
+                },
+                19: {
+                  size: 1,
+                  responsive: [
+                    [2, 1],
+                    [1, 9],
+                    [2, 17]
+                  ]
+                },
+                20: {
+                  size: 1,
+                  responsive: [
+                    [2, 17]
+                  ]
+                },
+                21: {
+                  size: 1,
+                  responsive: [
+                    [3, 17]
+                  ]
+                },
+                22: {
+                  size: 1,
+                  responsive: [
+                    [2, 17]
+                  ]
+                },
+                23: {
+                  size: 1,
+                  responsive: [
+                    [2, 17]
+                  ]
+                },
+                24: {
+                  size: 1,
+                  responsive: [
+                    [2, 17]
+                  ]
+                },
+                25: {
+                  size: 1,
+                  responsive: [
+                    [2, 17]
+                  ]
+                }
+              }
+            }
+          },
+          category: {
+            mobile: {
+              "basic-game": {
+                0: {
+                  size: 2
+                }
+              }
+            },
+            desktop: {
+              "basic-game": {
+                0: {
+                  size: 2
+                },
+                1: {
+                  size: 2
+                },
+                2: {
+                  size: 2
+                },
+                3: {
+                  size: 2
+                },
+                4: {
+                  size: 2
+                },
+                5: {
+                  size: 1,
+                  responsive: [
+                    [2, 9]
+                  ]
+                },
+                6: {
+                  size: 1,
+                  responsive: [
+                    [2, 9]
+                  ]
+                },
+                7: {
+                  size: 1,
+                  responsive: [
+                    [2, 11]
+                  ]
+                },
+                8: {
+                  size: 1,
+                  responsive: [
+                    [2, 11]
+                  ]
+                },
+                9: {
+                  size: 1,
+                  responsive: [
+                    [2, 12]
+                  ]
+                },
+                10: {
+                  size: 1,
+                  responsive: [
+                    [2, 14]
+                  ]
+                },
+                11: {
+                  size: 1,
+                  responsive: [
+                    [2, 14]
+                  ]
+                },
+                12: {
+                  size: 1,
+                  responsive: [
+                    [2, 17]
+                  ]
+                },
+                13: {
+                  size: 1,
+                  responsive: [
+                    [2, 17]
+                  ]
+                },
+                14: {
+                  size: 1,
+                  responsive: [
+                    [2, 17]
+                  ]
+                }
+              }
+            }
+          },
+          game: {
+            desktop: {
+              related: {
+                0: {
+                  size: 1,
+                  responsive: [
+                    [2, 12]
+                  ]
+                },
+                1: {
+                  size: 1,
+                  responsive: [
+                    [2, 12]
+                  ]
+                }
+              },
+              "game-not-available": {
+                0: {
+                  size: 2
+                },
+                1: {
+                  size: 2
+                }
+              }
+            }
+          },
+          search: {
+            desktop: {
+              "good-search-result": 2
+            },
+            mobile: {
+              "good-search-result": {
+                0: {
+                  size: 2
+                }
+              }
+            }
+          }
+        },
+        p = ({
+          list: e,
+          idx: s,
+          componentKey: i,
+          isMobile: t
+        }) => {
+          var o, n;
+          const r = s || 0,
+            l = ((a[i] || {})[t ? "mobile" : "desktop"] || {})[e] || {},
+            p = "number" == typeof l ? l : (null === (o = l[r]) || void 0 === o ? void 0 : o.size) ?? 1,
+            c = (null === (n = l[r]) || void 0 === n ? void 0 : n.responsive) ?? [];
+          return {
+            size: p,
+            responsive: c,
+            isMapped: p > 1 || c.length > 0
+          }
+        },
+        c = ({
+          list: e,
+          idx: s,
+          image: i,
+          alt: a = "",
+          lazy: c = !0,
+          componentKey: u = "",
+          isMobile: d = !1
+        }) => {
+          const {
+            srcset: m = [],
+            sizes: h = [],
+            src: v,
+            width: z,
+            defaultWidth: y = l[1]
+          } = (({
+            list: e,
+            idx: s,
+            image: i,
+            componentKey: n,
+            isMobile: r
+          }) => {
+            const {
+              size: a,
+              responsive: c
+            } = p({
+              list: e,
+              idx: s,
+              componentKey: n,
+              isMobile: r
+            }), u = [(0, o.pN)({
+              width: l[a],
+              image: i
+            }), (0, o.pN)({
+              width: 2 * l[a],
+              image: i
+            })];
+            if (c) {
+              const e = c.length,
+                s = [],
+                n = [],
+                r = [],
+                [p, d] = e > 2 ? c[c.length - 1] : [null, null];
+              let m = !1;
+              for (let a = 0; a < e && !(a + 1 >= e && m); a++) {
+                const e = c[a],
+                  u = e[0],
+                  h = e[1];
+                s.push(`${(0,o.pN)({width:l[u],image:i})} 1x, ${(0,o.pN)({width:2*l[u],image:i})} 2x`);
+                const v = c[a + 1];
+                let z = "";
+                if (v) {
+                  const e = v[1];
+                  z = ` and ${(0,t.mK)(e,"max")}`
+                }
+                let y = "";
+                u === p && (m = !0, y = `, ${(0,t.mK)(d,"min")}`), n.push(`${(0,t.mK)(h)}${z}${y}`), r.push(l[u])
+              }
+              return {
+                src: u,
+                srcset: s,
+                sizes: n,
+                width: r,
+                defaultWidth: l[a]
+              }
+            }
+            return {
+              src: u,
+              defaultWidth: l[a]
+            }
+          })({
+            list: e,
+            idx: s,
+            image: i,
+            componentKey: u,
+            isMobile: d
+          }), g = c ? "lazy" : "eager", b = `${u}-${e}-${v}-${y}-${z}`;
+          if (m.length && h.length) {
+            const e = [],
+              {
+                length: s
+              } = m,
+              i = `picture-${b}`;
+            for (let t = 0; t < s; t++) {
+              const s = `${i}-source-${z[t]}-${t}`,
+                o = (0, r.Y)("source", {
+                  srcSet: m[t],
+                  media: h[t],
+                  width: z[t],
+                  height: z[t]
+                }, s);
+              e.push(o)
+            }
+            return (0, r.FD)("picture", {
+              className: "xsoR0rbt8iM8_hOhWnUk",
+              children: [e, (0, r.Y)("img", {
+                className: n,
+                src: v[0],
+                alt: a,
+                srcSet: `${v[0]} 1x, ${v[1]} 2x`,
+                loading: g,
+                decoding: "async",
+                width: y,
+                height: y
+              })]
+            }, i)
+          }
+          const x = `img-${b}`;
+          return (0, r.Y)("img", {
+            className: n,
+            src: v[0],
+            srcSet: `${v[0]} 1x, ${v[1]} 2x`,
+            alt: a,
+            loading: g,
+            decoding: "async",
+            width: y,
+            height: y
+          }, x)
+        }
+    },
+    31262: (e, s, i) => {
+      function t({
+        label: e,
+        isNew: s
+      }) {
+        return e || (s ? "new" : null)
+      }
+      i.d(s, {
+        p: () => t
+      })
+    }
+  }
+]);
+//# sourceMappingURL=client~app-components-SummaryTile~0b2fd23e31fc3d03c6e2.js.map

@@ -1,0 +1,32 @@
+"use strict";
+(self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([
+  [8837], {
+    62676: (l, a, s) => {
+      s.r(a), s.d(a, {
+        default: () => c
+      });
+      var _ = s(34164),
+        e = s(17879),
+        t = s(62267),
+        r = s(95901);
+
+      function c({
+        className: l,
+        tags: a
+      }) {
+        return (0, r.Y)("ul", {
+          className: (0, _.A)(t.tags, l),
+          children: a.map((l => (0, r.Y)("li", {
+            className: t.tags__item,
+            children: (0, r.Y)(e.default, {
+              className: t.tags__link,
+              to: l.url,
+              children: l.label
+            })
+          }, l.url)))
+        })
+      }
+    }
+  }
+]);
+//# sourceMappingURL=client~app-components-Tags~3a5e4eb263d38311b3b1.js.map

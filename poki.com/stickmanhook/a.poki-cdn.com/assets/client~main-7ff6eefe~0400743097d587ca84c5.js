@@ -1,0 +1,799 @@
+"use strict";
+(self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([
+  [1643], {
+    47196: (e, t, i) => {
+      i.d(t, {
+        $B: () => n,
+        EU: () => r,
+        N1: () => a,
+        W$: () => m,
+        qv: () => o
+      });
+      const a = (e, t) => "us" === e.toLowerCase() && ["ca", "us-ca"].includes(t.toLowerCase()),
+        r = ["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "EL", "ES", "FI", "FR", "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK"],
+        o = [...r, "IS", "LI", "NO"],
+        n = ["CA", "US-CA", "IA", "US-IA"],
+        m = ["CO", "US-CO", "CT", "US-CT", "DE", "US-DE", "FL", "US-FL", "IN", "US-IN", "KY", "US-KY", "MD", "US-MD", "MN", "US-MN", "MT", "US-MT", "NE", "US-NE", "NJ", "US-NJ", "NH", "US-NH", "OR", "US-OR", "TN", "US-TN", "TX", "US-TX", "UT", "US-UT", "VA", "US-VA"]
+    },
+    36768: (e, t, i) => {
+      i.d(t, {
+        Ts: () => n
+      });
+      const a = new Map,
+        r = "undefined" != typeof ResizeObserver;
+      let o;
+
+      function n() {
+        r && (o = new ResizeObserver((e => {
+          e.forEach((({
+            contentRect: e,
+            target: t
+          }) => {
+            const i = a.get(t);
+            i && i(e)
+          }))
+        })))
+      }
+    },
+    56469: (e, t, i) => {
+      i.d(t, {
+        e: () => o
+      });
+      var a = i(42891),
+        r = i(90385);
+
+      function o() {
+        let e = -1 !== navigator.userAgent.toLowerCase().search("firefox") ? 1 : 0;
+        const t = window.store.getState(),
+          i = (0, a.H6)(t),
+          o = ["game", "preview", "mystery"].includes((0, r.K5)(t));
+        !i && o && window.innerHeight < 617 && (e = 16), window.scrollTo(0, e)
+      }
+    },
+    13150: (e, t, i) => {
+      i.d(t, {
+        AU: () => o,
+        AY: () => h,
+        Kt: () => b,
+        NS: () => w,
+        Oi: () => r,
+        Pz: () => m,
+        RC: () => k,
+        XD: () => u,
+        Zs: () => d,
+        Zt: () => y,
+        e0: () => p,
+        oM: () => f,
+        oQ: () => a,
+        sf: () => l,
+        yS: () => s,
+        yk: () => c,
+        zR: () => n,
+        zY: () => g
+      });
+      const a = "pokiMessageEvent",
+        r = "pokiMessageSdkDetails",
+        o = "pokiMessageSetPokiURLParams",
+        n = "pokiMessageSendCommand",
+        m = "pokiTrackingScreenGameplayStart",
+        g = "pokiTrackingScreenGameplayStop",
+        c = "pokiTrackingScreenCommercialBreak",
+        s = "pokiTrackingScreenRewardedBreak",
+        p = "pokiTrackingAdsStatusStarted",
+        l = "pokiTrackingAdsStatusCompleted",
+        d = "pokiTrackingAdsVideoProgress",
+        u = "pokiTrackingAdsStatusPrebidRequested",
+        h = "pokiTrackingAdsStatusLimit",
+        y = "pokiTrackingAdsStatusError",
+        f = "pokiTrackingScreenDisplayAdImpression",
+        w = "pokiTrackingScreenGameLoadingFinished",
+        k = "pokiMessageSendScreenshot",
+        b = "pokiAccountsOpenAuthPanel"
+    },
+    67893: (e, t, i) => {
+      i.d(t, {
+        KV: () => r,
+        jG: () => a,
+        y1: () => o
+      });
+      const a = () => {
+          var e;
+          return "undefined" == typeof window ? process.env.SERVICE_ENV : null === (e = window.ENV) || void 0 === e ? void 0 : e.SERVICE_ENV
+        },
+        r = () => "production" === a(),
+        o = () => "acceptance" === a()
+    },
+    52928: (e, t, i) => {
+      function a(e) {
+        return e[0].toUpperCase() + e.slice(1)
+      }
+      i.d(t, {
+        ZH: () => a,
+        ZV: () => o
+      });
+      const r = "undefined" != typeof Intl ? new Intl.NumberFormat : {
+        format: e => e
+      };
+
+      function o(e) {
+        return r.format(e)
+      }
+    },
+    26958: (e, t, i) => {
+      i.d(t, {
+        A: () => r
+      });
+      var a = i(40890);
+
+      function r(e, t) {
+        if (!t) return "";
+        let i = t.split(/(<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>)/gi);
+        return i = i.map((t => {
+          if (!t) return;
+          const i = /<a([^>]+)href="([^"]*)"[^>]*>[^<]*<\/a>/gm;
+          return t.startsWith("<script") ? t.replace(i, (e => e.replace(/"/g, '\\"'))) : null == t ? void 0 : t.replace(i, ((t, i, r) => {
+            const o = r.replace(/https:\/\/|http:\/\//gi, "").replace(e.domain, ""),
+              n = t.toLowerCase(),
+              m = n.includes("onclick"),
+              g = n.includes('target="_blank"');
+            return !(0, a.xs)(o) || m || g ? t : t.replace(i, `${i}onclick="window.navigateTo('${o}');return false;" `)
+          }))
+        })), i.join("")
+      }
+    },
+    82552: (e, t, i) => {
+      i.d(t, {
+        Lj: () => s,
+        uZ: () => g
+      });
+      var a = i(43908),
+        r = i(40890),
+        o = i(26958),
+        n = i(57190),
+        m = i(52928);
+
+      function g(e, t) {
+        const i = (0, a.sv)(),
+          o = Object.keys(t).filter((e => e && "xx" !== e && i[e])).map((a => {
+            var o;
+            const {
+              slug: n
+            } = t[a];
+            return {
+              href: (0, r.kC)(i[a], e, n),
+              hrefLang: a,
+              lang: null === (o = i[a]) || void 0 === o ? void 0 : o.lang
+            }
+          }));
+        if (t.en) {
+          const {
+            slug: a
+          } = t.en;
+          o.push({
+            href: (0, r.kC)(i.en, e, a),
+            hrefLang: "x-default",
+            lang: "en"
+          })
+        }
+        return o
+      }
+
+      function c(e, t) {
+        const i = (0, r.kC)(t, "home", "");
+        return {
+          "@type": "WebSite",
+          "@id": `${i}#website`,
+          name: "Poki",
+          url: i,
+          description: e.home_meta_description,
+          inLanguage: t.iso_lang,
+          publisher: {
+            "@type": "Organization",
+            "@id": "https://poki.com/#organization",
+            url: "https://poki.com",
+            name: "Poki",
+            description: "Poki is a free online games platform that offers more than 1500 games from a global community of creators to over 60 million monthly playing users.",
+            logo: "https://a.poki-cdn.com/img/favicon.svg",
+            brand: {
+              "@type": "Brand",
+              "@id": "https://poki.com/#brand",
+              name: "Poki",
+              slogan: "Let the world play"
+            },
+            email: "hello@poki.com",
+            sameAs: ["https://www.facebook.com/Poki", "https://linkedin.com/company/poki", "https://about.poki.com", "https://twitter.com/Poki", "https://www.similarweb.com/website/poki.com/", "https://www.youtube.com/poki", "https://www.tiktok.com/@poki_games", "https://medium.com/poki", "https://www.instagram.com/poki__games/"]
+          }
+        }
+      }
+
+      function s(e, t, i, a) {
+        if ("home" === i) {
+          const o = (0, r.kC)(e, i, ""),
+            {
+              games: n
+            } = a.homeResults,
+            m = n.slice(0, 20),
+            g = `https://a.poki-cdn.com/cdn-cgi/image/quality=78,width=1200,height=630,f=png/opengraph/${e.id}/home/home-1200x630.png`,
+            s = `https://a.poki-cdn.com/cdn-cgi/image/quality=78,width=1200,height=675,f=png/opengraph/${e.id}/home/home-1200x675.png`,
+            p = `https://a.poki-cdn.com/cdn-cgi/image/quality=78,width=1200,height=1200,f=png/opengraph/${e.id}/home/home-1200x1200.png`,
+            l = `https://a.poki-cdn.com/cdn-cgi/image/quality=78,width=1200,height=900,f=png/opengraph/${e.id}/home/home-1200x900.png`,
+            d = `https://a.poki-cdn.com/cdn-cgi/image/quality=78,width=1200,height=600,f=png/opengraph/${e.id}/home/home-1200x600.png`;
+          return {
+            meta: {
+              canonical: o,
+              title: t.home_meta_title,
+              description: t.home_meta_description
+            },
+            jsonLD: [{
+              "@context": "http://schema.org",
+              "@type": "WebPage",
+              "@id": `${o}#WebPage`,
+              url: o,
+              name: t.home_meta_title,
+              description: t.home_meta_description,
+              inLanguage: e.iso_lang,
+              image: [{
+                "@type": "ImageObject",
+                url: s,
+                width: "1200",
+                height: "675"
+              }, {
+                "@type": "ImageObject",
+                url: p,
+                width: "1200",
+                height: "1200"
+              }, {
+                "@type": "ImageObject",
+                url: l,
+                width: "1200",
+                height: "900"
+              }],
+              mainEntity: {
+                "@type": "ItemList",
+                name: t.breadcrumb_games,
+                itemListOrder: "http://schema.org/ItemListOrderAscending",
+                numberOfItems: m.length,
+                itemListElement: m.map((({
+                  title: t,
+                  slug: i
+                }, a) => ({
+                  "@type": "ListItem",
+                  position: a + 1,
+                  name: t,
+                  url: (0, r.kC)(e, "game", i)
+                })))
+              },
+              isPartOf: c(t, e)
+            }],
+            og: {
+              title: t.home_meta_title,
+              url: o,
+              description: t.home_meta_description,
+              locale: e.locale,
+              image: g,
+              "image:width": 1200,
+              "image:height": 630,
+              "image:alt": `${t.home_title} - ${e.title}`,
+              "image:type": "image/png",
+              site_name: "Poki",
+              type: "website"
+            },
+            twitter: {
+              card: "summary_large_image",
+              title: t.home_meta_title,
+              description: t.home_meta_description,
+              image: d,
+              "image:alt": `${t.home_title} - ${e.title}`,
+              site: "@Poki"
+            },
+            content: a
+          }
+        }
+        if ("category" === i) {
+          const n = (0, r.kC)(e, i, a.category.slug),
+            g = [{
+              label: (0, m.ZH)(e.title),
+              path: (0, r.AO)(e, "home", ""),
+              url: (0, r.kC)(e, "home", "")
+            }, ...(a.category.breadcrumb || []).map((t => ({
+              label: t.title,
+              path: (0, r.AO)(e, "category", t.slug),
+              url: (0, r.kC)(e, "category", t.slug)
+            })))],
+            {
+              games: s
+            } = a.category,
+            p = s.slice(0, 20),
+            l = (0, r.pN)({
+              width: 1200,
+              height: 1200,
+              image: a.category.image,
+              format: "png"
+            }),
+            d = {
+              "@type": "ImageObject",
+              url: l,
+              thumbnailUrl: l,
+              image: l,
+              contentUrl: l,
+              width: "1200",
+              height: "1200"
+            },
+            u = `https://a.poki-cdn.com/cdn-cgi/image/quality=78,width=1200,height=630,f=png/opengraph/${e.id}/categories/${a.category.slug}-1200x630.png`,
+            h = `https://a.poki-cdn.com/cdn-cgi/image/quality=78,width=1200,height=600,f=png/opengraph/${e.id}/categories/${a.category.slug}-1200x600.png`;
+          return {
+            id: a.category.id,
+            slug: a.category.slug,
+            meta: {
+              ...a.category.meta,
+              canonical: n,
+              shortTitle: a.category.title
+            },
+            og: {
+              title: a.category.meta.title,
+              url: n,
+              description: a.category.meta.description,
+              locale: e.locale,
+              image: u,
+              "image:width": 1200,
+              "image:height": 630,
+              "image:alt": `${a.category.title} - ${e.title}`,
+              "image:type": "image/png",
+              site_name: "Poki",
+              type: "website"
+            },
+            twitter: {
+              card: "summary_large_image",
+              title: a.category.meta.title,
+              description: a.category.meta.description,
+              image: h,
+              "image:alt": `${a.category.title} - ${e.title}`,
+              site: "@Poki"
+            },
+            jsonLD: [{
+              "@context": "http://schema.org",
+              "@type": "CollectionPage",
+              "@id": `${n}#CollectionPage`,
+              url: n,
+              name: a.category.meta.title,
+              description: a.category.meta.description,
+              inLanguage: e.iso_lang,
+              image: d,
+              primaryImageOfPage: d,
+              thumbnail: d,
+              thumbnailUrl: d.url,
+              breadcrumb: {
+                "@type": "BreadcrumbList",
+                itemListElement: g.map((({
+                  label: e = "",
+                  url: t = ""
+                }, i) => ({
+                  "@type": "ListItem",
+                  position: i + 1,
+                  item: {
+                    "@type": "Thing",
+                    "@id": t,
+                    name: e
+                  }
+                })))
+              },
+              mainEntity: {
+                "@type": "ItemList",
+                name: t.breadcrumb_games,
+                itemListOrder: "http://schema.org/ItemListOrderAscending",
+                numberOfItems: p.length,
+                itemListElement: p.map((({
+                  title: t,
+                  slug: i
+                }, a) => ({
+                  "@type": "ListItem",
+                  position: a + 1,
+                  name: t,
+                  url: (0, r.kC)(e, "game", i)
+                })))
+              },
+              hasPart: {
+                "@type": "FAQPage",
+                mainEntity: [{
+                  "@type": "Question",
+                  name: t.category_schema.replace("%CATEGORY_NAME%", a.category.title),
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: `<ol>${s.slice(0,10).map((t=>`<li><a href="${(0,r.kC)(e,"game",t.slug)}">${t.title}</a></li>`))}</ol>`
+                  }
+                }, {
+                  "@type": "Question",
+                  name: t.category_schema_mobile.replace("%CATEGORY_NAME%", a.category.title),
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: `<ol>${s.filter((e=>e.mobile)).slice(0,5).map((t=>`<li><a href="${(0,r.kC)(e,"game",t.slug)}">${t.title}</a></li>`))}</ol>`
+                  }
+                }]
+              },
+              isPartOf: c(t, e)
+            }],
+            description: {
+              breadcrumbs: g,
+              title: a.category.title,
+              body: (0, o.A)(e, a.category.description),
+              image: a.category.image
+            },
+            content: a
+          }
+        }
+        if ("game" === i || "preview" === i || "mystery" === i) {
+          var g;
+          const s = (0, r.kC)(e, i, a.game.slug),
+            p = [{
+              label: (0, m.ZH)(e.title),
+              path: (0, r.AO)(e, "home", ""),
+              url: (0, r.kC)(e, "home", "")
+            }, ...(a.game.breadcrumb || []).map((t => ({
+              label: t.title,
+              path: (0, r.AO)(e, "category", t.slug),
+              url: (0, r.kC)(e, "category", t.slug),
+              isCategory: !0
+            }))), {
+              label: a.game.title,
+              path: (0, r.AO)(e, "game", a.game.slug),
+              url: (0, r.kC)(e, "game", a.game.slug)
+            }],
+            l = (0, r.pN)({
+              width: 1200,
+              height: 1200,
+              image: a.game.image,
+              format: "png"
+            }),
+            d = {
+              "@type": "ImageObject",
+              url: l,
+              thumbnailUrl: l,
+              image: l,
+              contentUrl: l,
+              width: "1200",
+              height: "1200"
+            },
+            u = a.game.animated_thumbnail && (0, n.getVideo)({
+              videoUrl: a.game.animated_thumbnail,
+              videoSize: "3x3"
+            }).h264,
+            h = u ? {
+              video: u,
+              "video:type": "video/mp4",
+              "video:width": 314,
+              "video:height": 314
+            } : {},
+            y = u ? {
+              "@type": "VideoObject",
+              name: a.game.title,
+              description: a.game.meta.description,
+              thumbnailUrl: l,
+              contentUrl: u,
+              embedUrl: u,
+              uploadDate: a.game.created_at,
+              duration: "PT6S"
+            } : {};
+          return {
+            jsonLD: [{
+              "@context": "http://schema.org",
+              "@type": "ItemPage",
+              "@id": `${s}/#ItemPage`,
+              url: s,
+              name: a.game.meta.title,
+              description: a.game.meta.description,
+              inLanguage: e.iso_lang,
+              breadcrumb: {
+                "@type": "BreadcrumbList",
+                itemListElement: p.map((({
+                  label: e = "",
+                  url: t = ""
+                }, i) => ({
+                  "@type": "ListItem",
+                  position: i + 1,
+                  item: {
+                    "@type": "Thing",
+                    "@id": t,
+                    name: e
+                  }
+                })))
+              },
+              primaryImageOfPage: d,
+              thumbnail: d,
+              thumbnailUrl: d.url,
+              image: d,
+              mainEntity: {
+                "@type": ["VideoGame", "WebApplication"],
+                name: a.game.title,
+                description: a.game.meta.description,
+                url: s,
+                image: d,
+                applicationCategory: "GameApplication",
+                applicationSubCategory: null === (g = a.game.breadcrumb) || void 0 === g || null === (g = g[0]) || void 0 === g ? void 0 : g.title,
+                operatingSystem: "Web Browser",
+                gamePlatform: "Poki",
+                availableOnDevice: ["Mobile", "Tablet", "Desktop"],
+                author: {
+                  "@type": "Person",
+                  name: a.game.developer
+                },
+                aggregateRating: a.game.rating && {
+                  "@type": "AggregateRating",
+                  worstRating: 1,
+                  bestRating: 5,
+                  ratingValue: a.game.rating.rating,
+                  ratingCount: a.game.rating.up_count + a.game.rating.down_count
+                },
+                offers: {
+                  "@type": "Offer",
+                  category: "free",
+                  price: 0,
+                  priceCurrency: "EUR",
+                  availability: "http://schema.org/InStock"
+                },
+                screenshot: d,
+                thumbnail: d,
+                thumbnailUrl: d.url,
+                video: y
+              },
+              isPartOf: c(t, e)
+            }],
+            og: {
+              title: a.game.meta.title,
+              url: s,
+              description: a.game.meta.description,
+              locale: e.locale,
+              image: l,
+              "image:width": 1200,
+              "image:height": 1200,
+              "image:type": "image/png",
+              "image:alt": `${a.game.title} - ${e.title}`,
+              site_name: "Poki",
+              type: "website",
+              ...h
+            },
+            twitter: {
+              card: "summary_large_image",
+              title: a.game.meta.title,
+              description: a.game.meta.description,
+              image: l,
+              "image:alt": `${a.game.title} - ${e.title}`,
+              site: "@Poki"
+            },
+            id: a.game.id,
+            slug: a.game.slug,
+            meta: {
+              ...a.game.meta,
+              canonical: s
+            },
+            description: {
+              id: a.game.id,
+              breadcrumbs: p,
+              title: a.game.title,
+              developer: a.game.developer,
+              body: (0, o.A)(e, a.game.description),
+              tags: a.game.categories.map((({
+                title: e,
+                url: t
+              }) => ({
+                label: e,
+                url: t
+              }))),
+              store_urls: a.game.store_urls,
+              rating: a.game.rating,
+              image: a.game.image
+            },
+            content: a,
+            rating: a.game.rating
+          }
+        }
+        if ("contact" === i) {
+          const a = (0, r.kC)(e, i, "contact");
+          return {
+            jsonLD: [{
+              "@context": "http://schema.org",
+              "@type": "ContactPage",
+              url: a,
+              name: t.nav_contact,
+              inLanguage: e.iso_lang,
+              breadcrumb: {
+                "@type": "BreadcrumbList",
+                itemListElement: [{
+                  "@type": "ListItem",
+                  position: 1,
+                  item: {
+                    "@type": "Thing",
+                    "@id": (0, r.kC)(e, "home", ""),
+                    name: (0, m.ZH)(e.title)
+                  }
+                }, {
+                  "@type": "ListItem",
+                  position: 2,
+                  item: {
+                    "@type": "Thing",
+                    "@id": a,
+                    name: t.nav_contact
+                  }
+                }]
+              },
+              isPartOf: c(t, e)
+            }],
+            meta: {
+              title: t.nav_contact
+            }
+          }
+        }
+      }
+    },
+    40890: (e, t, i) => {
+      i.d(t, {
+        AO: () => o,
+        DZ: () => s,
+        KJ: () => a,
+        M5: () => c,
+        O$: () => r,
+        TH: () => g,
+        aX: () => m,
+        kC: () => n,
+        pN: () => l,
+        xs: () => p
+      });
+      const a = {
+        category: "/",
+        content: "/c/",
+        game: "/g/",
+        game_suffix: "",
+        prefix: "",
+        preview: "/preview",
+        mystery: "/mystery",
+        privacy: "/privacy"
+      };
+
+      function r(e, t) {
+        return Object.keys(t).reduce(((e, i) => function(e, t, i) {
+          return e && t ? [e, /\?/.test(e) ? "&" : "?", t, i ? `=${i}` : ""].join("") : e
+        }(e, i, t[i])), e)
+      }
+
+      function o(e, t, i) {
+        const r = {
+          ...a,
+          ...e.paths
+        };
+        return "home" === t ? r.prefix && "/en" !== r.prefix ? r.prefix : "/" : "content" === t ? [r.prefix, r.content, i].join("") : "preview" === t ? [r.prefix, r.preview, "/", i].join("") : "mystery" === t ? [r.prefix, r.mystery, "/", i].join("") : "privacy" === t ? i ? [r.prefix, r.privacy, "/", i].join("") : [r.prefix, r.privacy].join("") : ("game" === t ? [r.prefix, r.game, i, r.game_suffix] : [r.prefix, r.category, i]).join("")
+      }
+
+      function n(e, t, i) {
+        const a = o(e, t, i);
+        return `https://${e.domain}${a}`
+      }
+
+      function m(e) {
+        const t = e.match(/^(?:https?:\/\/)?(?:www\.)?([^:/]+)/);
+        return t ? t[1] : null
+      }
+
+      function g(e, t, i) {
+        const r = {
+          ...a,
+          ...e.paths
+        };
+        let o;
+        switch (t) {
+          case "game":
+            o = new RegExp(`^${r.prefix}${r.game.replace(/\+/g,"\\+")}([^?]*)${r.game_suffix}(?:\\?.*)?$`);
+            break;
+          case "category":
+            o = new RegExp(`^${r.prefix}${r.category.replace(/\+/g,"\\+")}([^?/]*)`);
+            break;
+          case "content":
+            o = new RegExp(`^${r.prefix}${r.content}(.*)`);
+            break;
+          case "preview":
+            o = new RegExp(`^${r.prefix}/preview/([^/?]*)`);
+            break;
+          case "mystery":
+            o = new RegExp(`^${r.prefix}/mystery/([^/?]*)`);
+            break;
+          case "privacy":
+            o = new RegExp(`^${r.prefix}/privacy/([^/?]*)`);
+            break;
+          default:
+            throw new Error(`No implementation for extracting slugs of type ${t}`)
+        }
+        const n = o.exec(i);
+        return n ? n[1] : ""
+      }
+
+      function c(e, t) {
+        const i = function(e, t = []) {
+            if (!e) return "";
+            const i = "/" === e[0],
+              a = "https://poki.io";
+            let r;
+            try {
+              r = i ? new URL(e, a) : new URL(e)
+            } catch (t) {
+              throw new Error(`${t}: ${e}`)
+            }
+            return t.forEach((e => {
+              r.searchParams.delete(e)
+            })), i ? decodeURI(r.toString().replace(a, "")) : decodeURI(r.toString())
+          }(t),
+          r = {
+            ...a,
+            ...e.paths
+          };
+        if ("/" === i || "" !== r.prefix && i === r.prefix) return "home";
+        if (new RegExp(`^${r.prefix}${r.content}(.*)$`).test(i)) return "content";
+        if (new RegExp(`^${r.prefix}${r.preview}(.*)$`).test(i)) return "preview";
+        if (new RegExp(`^${r.prefix}${r.mystery}(.*)$`).test(i)) return "mystery";
+        if (new RegExp(`^${r.prefix}${r.privacy}(.*)$`).test(i)) return "privacy";
+        return new RegExp(`^${r.prefix}${r.game.replace(/\+/g,"\\+")}.*${r.game_suffix}$`).test(i) ? "game" : "category"
+      }
+
+      function s(e, t) {
+        const i = new URLSearchParams(t).get(e);
+        return null === i ? "" : i
+      }
+
+      function p(e) {
+        return /^\//.test(e)
+      }
+
+      function l({
+        width: e,
+        height: t = e,
+        image: i,
+        quality: a = 78,
+        blur: r = 0,
+        format: o = "auto"
+      }) {
+        const {
+          path: n
+        } = i;
+        return n ? `https://img.poki-cdn.com/cdn-cgi/image/quality=${a},${e?`width=${e}`:""},${t?`height=${t}`:""}${r?`,blur=${r}`:""},fit=cover,f=${o}/${n.replace("https://img.poki-cdn.com/","")}` : ""
+      }
+    },
+    34931: (e, t, i) => {
+      function a() {
+        let e = Math.floor(Date.now() / 1e3),
+          t = "";
+        for (let i = 0; i < 4; i++) t = String.fromCharCode(255 & e) + t, e >>= 8;
+        if (window.crypto && crypto.getRandomValues && Uint32Array) {
+          const e = new Uint32Array(12);
+          crypto.getRandomValues(e);
+          for (let i = 0; i < 12; i++) t += String.fromCharCode(255 & e[i])
+        } else
+          for (let e = 0; e < 12; e++) t += String.fromCharCode(Math.floor(256 * Math.random()));
+        return btoa(t).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "")
+      }
+      i.d(t, {
+        u: () => a
+      })
+    },
+    28469: (e, t, i) => {
+      i.d(t, {
+        R: () => o
+      });
+      var a = i(55509),
+        r = i(11865);
+
+      function o(e) {
+        return Object.values(a.y).reduce(((e, t) => {
+          if ("undefined" == typeof window) return e;
+          try {
+            const i = (0, r.Gq)(t.key);
+            if (i) {
+              const a = JSON.parse(i);
+              t.validator(a) ? e[t.rootKey][t.childKey] = a : localStorage.removeItem(t.key)
+            }
+          } catch {
+            localStorage.removeItem(t.key)
+          }
+          return e
+        }), e)
+      }
+    }
+  }
+]);
+//# sourceMappingURL=client~main-7ff6eefe~0400743097d587ca84c5.js.map

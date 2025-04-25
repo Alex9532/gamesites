@@ -1,0 +1,227 @@
+"use strict";
+(self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([
+  [3787], {
+    33282: (e, t, s) => {
+      s.r(t), s.d(t, {
+        default: () => O,
+        tagContent: () => Y,
+        targetAspectRatio: () => w
+      });
+      var n = s(17402),
+        r = s(65676),
+        o = s(80243),
+        a = s(34164),
+        i = s(14565),
+        c = s(28642),
+        l = s(91833),
+        d = s(48554),
+        m = s(15049),
+        u = s(53210),
+        _ = s(91323),
+        h = s(42891),
+        p = s(11436),
+        y = s(98708),
+        g = s(36125),
+        v = s(90385),
+        f = s(25362),
+        A = s(36774),
+        b = s(40890),
+        N = s(25302),
+        P = s(46493),
+        k = s(1233),
+        E = s(89385),
+        S = s(95901);
+      const L = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-GameNotAvailable-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!s.m[t]
+          },
+          importAsync: () => Promise.all([s.e(4810), s.e(2610), s.e(3177), s.e(6858), s.e(6832), s.e(2505), s.e(7306), s.e(5707), s.e(1320)]).then(s.bind(s, 34601)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return s(t)
+          },
+          resolve() {
+            return 34601
+          }
+        }),
+        x = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-ExternallyHostedCommunication-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!s.m[t]
+          },
+          importAsync: () => Promise.all([s.e(4810), s.e(4712), s.e(5389)]).then(s.bind(s, 96768)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return s(t)
+          },
+          resolve() {
+            return 96768
+          }
+        }),
+        D = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-AdsBlockedMessage-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!s.m[t]
+          },
+          importAsync: () => Promise.all([s.e(1040), s.e(9845)]).then(s.bind(s, 91768)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return s(t)
+          },
+          resolve() {
+            return 91768
+          }
+        });
+
+      function Y(e, t = {}) {
+        let s = e;
+        return ["localhost", "games.poki.com"].some((t => e.includes(`//${t}`))) ? (s = (0, b.O$)(e, {
+          tag: "pg-abc97ca6b94fcb9e9f0820ae31235075cca93669",
+          ...t
+        }), s) : e
+      }
+      const w = 16 / 9,
+        C = !1,
+        F = "http://localhost:8080/sample/basic.html";
+
+      function O({
+        className: e
+      }) {
+        const [t, s] = (0, n.useState)(!1), [o, b] = (0, n.useState)(!0), {
+          isMobile: w
+        } = (0, n.useContext)(f.F), O = (0, r.d4)(v.Vv), R = (0, r.d4)(d.UO), q = (0, r.d4)(d.QX), M = (0, r.d4)(u.c), U = (0, r.d4)(u.p), B = (0, r.d4)(_.Gd), K = (0, r.d4)(h.rk), $ = (0, r.d4)(h.wu), H = (0, r.d4)((e => (0, h.KM)(e, O.id))), z = (0, r.d4)(p.IA), G = (0, r.d4)(g.l), I = (0, r.d4)(v.Qk), Q = (0, r.d4)(y.K), W = (0, r.d4)(v.Xk), X = (0, r.d4)(v.Ue), j = (0, r.d4)(h.Jj), J = (0, r.d4)(m.dR), V = (0, r.d4)(m.lb), T = (0, r.d4)(E.Ep);
+        (0, n.useEffect)((() => {
+          const e = () => {
+            const e = !!document.fullscreenElement;
+            w && b(e), (0, P.F)({
+              category: "fullscreenChange",
+              action: e ? "enter" : "exit"
+            })
+          };
+          return document.addEventListener("fullscreenchange", e), () => {
+            document.removeEventListener("fullscreenchange", e)
+          }
+        }), []);
+        const Z = w ? O.mobile_file : O.file,
+          ee = C ? F : Z.content,
+          te = V ? "y" : "n",
+          se = O.id,
+          ne = {
+            site_id: B.id,
+            iso_lang: B.iso_lang,
+            country: $,
+            poki_url: `https://${B.domain}${I}`,
+            ...z,
+            ...G,
+            hoist: "yes",
+            nonPersonalized: J ? "n" : "y",
+            cloudsavegames: T ? "y" : "n",
+            familyFriendly: te
+          };
+        O.categories && (ne.categories = O.categories.map((({
+          id: e
+        }) => e))), M && (ne.ab = M), U && (ne.experiment = U), W ? ne.special_condition = "landing" : X && (ne.special_condition = "crosspromo"), V && "NL" !== $ && (ne.csp = 1);
+        const re = Y(ee, ne),
+          oe = !(w && "landscape" === K),
+          ae = "undefined" != typeof window && !H && !w && O.externally_hosted && A._k.includes(window.pokiCountry);
+        (0, n.useEffect)((() => ((0, N.o0)(), () => {
+          (0, N.oW)()
+        })), []), (0, n.useLayoutEffect)((() => {
+          if (w) {
+            const {
+              orientation: e
+            } = O;
+            s("both" !== e && e !== K && !R)
+          }
+        }), [K]);
+        const {
+          explicit_orientation_message: ie = !1
+        } = O, ce = w && q && !o;
+        return (0, S.Y)("div", {
+          className: (0, a.A)(k.gamePlayer, {
+            [k.gamePlayer_desktop]: !w
+          }, {
+            [k.gamePlayer_fullscreen]: q
+          }, e),
+          children: (0, S.FD)("div", {
+            className: k.gamePlayer__container,
+            children: [(0, S.FD)("div", {
+              className: k.gamePlayer__game,
+              id: "game-player",
+              children: [t && (0, S.FD)("div", {
+                className: (0, a.A)(k.gamePlayer__rotateScreen, {
+                  [k.gamePlayer__rotateScreen_showExplicitOrientationnMessage]: ie
+                }),
+                onClick: () => {
+                  s(!1)
+                },
+                children: [(0, S.FD)("div", {
+                  className: k.gamePlayer__rotateScreen__wrapper,
+                  children: [(0, S.Y)(l.default, {
+                    className: k.gamePlayer__rotateScreen__icon,
+                    name: "rotation"
+                  }), (0, S.Y)("strong", {
+                    className: k.gamePlayer__rotateScreen__text,
+                    children: Q.rotate_device
+                  })]
+                }), ie && (0, S.Y)("span", {
+                  className: k.gamePlayer__rotateScreen__btn,
+                  children: Q.got_it
+                })]
+              }), R ? (0, S.Y)(L, {}) : (0, S.Y)("div", {
+                className: k.gamePlayer__gameWrapper,
+                children: ae ? (0, S.Y)(x, {
+                  showBackground: !0,
+                  startCollapsed: !1
+                }) : (0, S.Y)(i.default, {
+                  content: re,
+                  gameId: se
+                })
+              }), ce && (0, S.Y)("button", {
+                type: "button",
+                className: (0, a.A)("buttonReset", k.gamePlayer__tapForFullscreen),
+                children: Q.tap_to_continue
+              })]
+            }), oe && (0, S.Y)(c.default, {}), j && (0, S.Y)(D, {})]
+          })
+        })
+      }
+    },
+    36125: (e, t, s) => {
+      s.d(t, {
+        l: () => a
+      });
+      var n = s(1081),
+        r = s(11436);
+      const o = ["preroll", "pokiDebug", "pokiLogging", "force_ad", "playtest", "metrictest"],
+        a = (0, n.Mz)(r.fn, (e => {
+          const t = {},
+            s = new URLSearchParams(e);
+          return o.forEach((e => {
+            const n = s.get(e);
+            n && (t[e] = n)
+          })), t
+        }))
+    }
+  }
+]);
+//# sourceMappingURL=client~app-components-GamePlayer~2be13eb9aafaabbbeb56.js.map

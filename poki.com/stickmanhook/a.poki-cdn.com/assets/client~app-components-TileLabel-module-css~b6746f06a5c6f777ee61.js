@@ -1,0 +1,16 @@
+"use strict";
+(self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([
+  [8371], {
+    71618: (_, e, i) => {
+      i.r(e), i.d(e, {
+        tileLabel: () => l,
+        tileLabel__container: () => L,
+        tileLabel__icon: () => t
+      });
+      var l = "ETVXnX3Vp6CGuiKrBvDR",
+        L = "StuSAzcQnRTWluaN5YMe",
+        t = "rCs5cyEiqiTpYvt_VBCR"
+    }
+  }
+]);
+//# sourceMappingURL=client~app-components-TileLabel-module-css~b6746f06a5c6f777ee61.js.map

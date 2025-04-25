@@ -1,0 +1,25 @@
+"use strict";
+(self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([
+  [4834], {
+    4834: (n, l, t) => {
+      function e() {
+        const n = document.getElementById("game-element");
+        try {
+          var l;
+          null == n || null === (l = n.contentWindow) || void 0 === l || null === (l = l.frames[0]) || void 0 === l || l.focus()
+        } catch {
+          try {
+            var t;
+            null == n || null === (t = n.contentWindow) || void 0 === t || t.focus()
+          } catch {
+            null == n || n.focus()
+          }
+        }
+      }
+      t.d(l, {
+        r: () => e
+      })
+    }
+  }
+]);
+//# sourceMappingURL=client~4834~56266c5b6ebadb329186.js.map

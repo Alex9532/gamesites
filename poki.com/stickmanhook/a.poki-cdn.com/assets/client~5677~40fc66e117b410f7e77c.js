@@ -1,0 +1,201 @@
+"use strict";
+(self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([
+  [5677], {
+    65677: (e, i, o) => {
+      o.r(i), o.d(i, {
+        checkAutoRedirectEpic: () => S,
+        checkPrivacyPolicyEpic: () => M,
+        googleAnalyticsPrivacyEpic: () => x,
+        hideNotificationsOnNavigateEpic: () => $,
+        refreshCacheEpic$: () => F,
+        sendDeviceCapabilitiesEpic: () => G,
+        setViewportOrientationEpic: () => L,
+        showUserFeedbackEpic: () => P,
+        stateSyncEpic: () => R
+      });
+      o(30882);
+      var n = o(29079),
+        t = o(61701),
+        a = o(65693),
+        r = o(81160),
+        c = o(44240),
+        p = o(56978),
+        l = o(38975),
+        u = o(76981),
+        s = o(63720),
+        d = o(62467),
+        f = o(16126),
+        g = o(36173),
+        v = o(59099),
+        h = o(8767),
+        m = o(28452),
+        y = o(42891),
+        w = o(88800),
+        _ = o(23260),
+        b = o(7696),
+        k = o(28685),
+        A = o(98708),
+        E = o(90385),
+        N = o(91323),
+        D = o(15049),
+        O = o(55509),
+        C = o(46493),
+        T = o(11865);
+      o(95901);
+
+      function L(e) {
+        var i;
+        if ("function" != typeof(null === (i = window) || void 0 === i ? void 0 : i.matchMedia)) return t.w;
+        const o = window.matchMedia("(orientation: portrait)"),
+          l = (0, a.R)(window, "orientationchange").pipe((0, r.T)((() => o.matches))),
+          u = e.pipe((0, n.g)(y.Xy.type));
+        return (0, c.h)(u, l).pipe((0, p.B)(100), (0, r.T)((() => (0, y.nx)({
+          orientation: o.matches ? "portrait" : "landscape"
+        }))))
+      }
+
+      function M(e, i) {
+        return t.w
+      }
+
+      function S(e, i) {
+        var o;
+        if (null === (o = window) || void 0 === o || null === (o = o.location) || void 0 === o || null === (o = o.hash) || void 0 === o || !o.includes("#utm_source=redirect") || (0, N.DF)(i.value) === N.LJ.APP) return t.w;
+        const a = e.pipe((0, n.g)(y.F8.type), (0, f.p)((() => (0, y.Wv)(i.value)))),
+          r = e.pipe((0, g.o)((() => (0, D.GZ)(i.value) ? (0, d.of)(t.w) : e.pipe((0, n.g)(b.Se.type)))), (0, l.s)(1));
+        return e.pipe((0, n.g)(y.Xy.type), (0, l.s)(1), (0, s.n)((() => (0, c.h)(a, r))), (0, v.M)((() => {
+          var e, o;
+          let n, a;
+          const r = window.location.hash.replace("#utm_source=redirect-", "") || "";
+          window.location.hash = "", 5 === r.length && ([n, a] = r.split("-"));
+          const c = (0, E.nK)(i.value),
+            p = c.find((e => {
+              var i;
+              return (null == e || null === (i = e.href) || void 0 === i ? void 0 : i.includes("poki.com/")) && (null == e ? void 0 : e.lang) === n
+            })),
+            l = c.find((e => {
+              var i;
+              return (null == e || null === (i = e.href) || void 0 === i ? void 0 : i.includes("poki.com/")) && (null == e ? void 0 : e.lang) === a
+            }));
+          if (!p || !l) return t.w;
+          const u = (0, A.K)(i.value),
+            s = `${u.auto_redirect_title.replace("[language]",l.languageName)}`,
+            d = u.auto_redirect_message.replace("[language]", p.languageName),
+            f = null === (e = u.auto_redirect_button) || void 0 === e ? void 0 : e.replace("[language]", p.languageName);
+          (0, C.F)({
+            category: "page",
+            action: "autoRedirectImpression",
+            data: {
+              from: p.languageName,
+              to: l.languageName
+            }
+          }), null === (o = window) || void 0 === o || null === (o = o.store) || void 0 === o || o.dispatch((0, w.Gg)({
+            notification: {
+              title: s,
+              titleIcon: {
+                image: "https://a.poki-cdn.com/images/icon-world-v2.svg",
+                width: 22,
+                height: 22
+              },
+              childComponent: {
+                name: "AutoRedirectNotification",
+                props: {
+                  message: d,
+                  button: f,
+                  href: null == p ? void 0 : p.href,
+                  lang: null == p ? void 0 : p.lang
+                }
+              },
+              autoExpire: 1e4
+            }
+          }))
+        })), (0, h.w)())
+      }
+
+      function x(e, i) {
+        return e.pipe((0, n.g)(y.Xy.type), (0, v.M)((() => {
+          console.info("%c🎮 We`re hiring Frontend Developers @ Poki!", 'color: #009cff; background: #002b50; font-family: "Terminal", monospace; padding: 6px; font-size: 12px;'), console.info("%cApply now or risk a lifetime of work on TODO apps", 'color: #009cff; background: #002b50; font-family: "Terminal", monospace; padding: 6px; font-size: 12px;'), console.info("%chttps://jobs.poki.com/job/frontend-developer/", 'color: #ffed85; background: #002b50; font-family: "Terminal", monospace; padding: 6px; font-size: 12px;');
+          if ((0, y.vo)(i.value)) return;
+          const e = (0, E.tM)(i.value),
+            o = `https://${(0,N.Gd)(i.value).domain}${e}`;
+          console.info(`%cGoogle Analytics is blocked by Poki, refer to our privacy statement (${o})`, "background:rgb(0, 156, 255);color:#fff")
+        })), (0, h.w)())
+      }
+
+      function G(e, i) {
+        const a = (0, D.hv)(i.value),
+          r = (0, y.Rd)(i.value);
+        return !a || r > .5 ? t.w : e.pipe((0, n.g)(_.y.type), (0, l.s)(1), (0, u.c)(6e4), (0, v.M)((() => {
+          o.e(2294).then(o.bind(o, 12294)).then((({
+            default: e
+          }) => {
+            e()
+          }))
+        })), (0, h.w)())
+      }
+
+      function P(e, i) {
+        const o = "user-satisfaction",
+          a = (0, y.Rd)(i.value),
+          c = (0, w.hk)(i.value, o),
+          p = (0, y.wu)(i.value),
+          s = (0, N.Gd)(i.value),
+          d = a < .05,
+          v = ["AU", "CA", "GB", "IE", "NZ", "US"].includes(p),
+          h = 3 === s.id;
+        if (!v || !h || c || !d) return t.w;
+        (0, C.F)({
+          category: "pps",
+          action: "trigger"
+        });
+        const m = e.pipe((0, n.g)(y.Xy.type), (0, l.s)(1), (0, u.c)(36e4)),
+          b = e.pipe((0, n.g)(_.y.type), (0, f.p)((() => "game" !== (0, E.K5)(i.value))), (0, l.s)(1));
+        return m.pipe((0, g.o)((() => b)), (0, r.T)((() => (0, w.Gg)({
+          notification: {
+            id: o,
+            title: "Would you recommend Poki to your friends?",
+            childComponent: {
+              name: "UserSatisfaction",
+              props: {
+                notificationID: o
+              }
+            },
+            muteAfterClose: !0
+          }
+        }))))
+      }
+
+      function $(e, i) {
+        return e.pipe((0, n.g)("@router/LOCATION_CHANGE"), (0, r.T)((() => (0, k.L)(i.value))), (0, m.Z)((e => e.filter((e => e.navigateToClose)).map((e => (0, w.oe)({
+          id: e.id
+        }))))))
+      }
+
+      function R(e, i) {
+        if ("undefined" == typeof window) return t.w;
+        const o = [],
+          n = (0, a.R)(document, "visibilitychange").pipe((0, f.p)((() => "hidden" === document.visibilityState))),
+          r = e.pipe((0, f.p)((e => O.D[e.type])), (0, v.M)((e => {
+            const {
+              state: i,
+              property: n
+            } = O.D[e.type], t = `${i}/${n}`;
+            o.includes(t) || o.push(t)
+          })));
+        return (0, c.h)(n.pipe((0, v.M)((() => {
+          o.forEach((e => {
+            const [o, n] = e.split("/"), t = i.value[o][n];
+            (0, T.SO)(`state/${e}`, JSON.stringify(t))
+          })), o.length = 0
+        }))), r).pipe((0, h.w)())
+      }
+
+      function F(e) {
+        return e.pipe((0, n.g)(y.Xy.type), (0, l.s)(1)).pipe((0, u.c)(864e5), (0, s.n)((() => e.pipe((0, n.g)(_.y.type), (0, v.M)((() => {
+          window.location.reload()
+        })), (0, h.w)()))))
+      }
+    }
+  }
+]);
+//# sourceMappingURL=client~5677~40fc66e117b410f7e77c.js.map

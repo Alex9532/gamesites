@@ -1,0 +1,202 @@
+"use strict";
+(self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([
+  [2805], {
+    61481: (e, t, r) => {
+      r.d(t, {
+        H: () => $,
+        KK: () => q,
+        Wm: () => f,
+        b7: () => G,
+        gM: () => L,
+        iK: () => d,
+        lh: () => c,
+        mk: () => p,
+        y6: () => _
+      });
+      var a = r(75816),
+        i = r(10378),
+        s = r(43908),
+        o = r(46278),
+        n = r(80382),
+        u = r(82552);
+      const l = (0, o.G6)(),
+        g = (0, o.T5)(),
+        m = "mystery-tile-square.png",
+        c = (0, a.xP)({
+          reducerPath: "api",
+          baseQuery: (0, i.cw)({
+            baseUrl: l
+          }),
+          endpoints: e => ({
+            getLocalisations: e.query({
+              query: ({
+                site: e
+              }) => `/localisations?site=${e.id}`
+            }),
+            getLocalisation: e.query({
+              query: ({
+                site: e,
+                slug: t
+              }) => `/localisations/${t}/${e.lang}?country=${e.lang}&site=${e.id}`
+            }),
+            getHomepage: e.query({
+              query: ({
+                site: e,
+                device: t,
+                geo: r,
+                experiment: a,
+                trafficSource: i
+              }) => `/list/game/HOME?site=${e.id}&device=${t}&country=${r}&limit=${"mobile"===t?143:145}${a?`&experiment=${a}`:""}${["tiktok","instagram"].includes(i)?"&tiktok=1":""}`,
+              transformResponse: (e, t, r) => {
+                const {
+                  content: a
+                } = e;
+                return {
+                  games: a.map((e => (0, n.rL)(r.site, "game", e))),
+                  alternates: s.TH
+                }
+              }
+            }),
+            getPopularSearches: e.query({
+              query: ({
+                site: e,
+                device: t,
+                geo: r
+              }) => `/search/clicks?site=${e.id}&country=${r}&amount=6&view=${t}`,
+              transformResponse: (e, t, r) => (e || []).map((e => (0, n.rL)(r.site, "game", e)))
+            }),
+            getImvitaConfigs: e.query({
+              query: () => "/imvita"
+            }),
+            getCategory: e.query({
+              query: ({
+                slug: e,
+                site: t,
+                device: r,
+                geo: a,
+                experiment: i
+              }) => `/category/${encodeURIComponent(e)}?site=${t.id}&device=${r}&country=${a}&limit=300${i?`&experiment=${i}`:""}`,
+              transformResponse: (e, t, r) => {
+                const a = (0, n.NH)(r.device, (null == e ? void 0 : e.games) || []).map((e => (0, n.rL)(r.site, "game", e))),
+                  i = ((null == e ? void 0 : e.related_categories) || []).map((e => (0, n.rL)(r.site, "category", e))),
+                  s = (0, u.uZ)("category", e.alternate_sites);
+                return delete e.related_categories, {
+                  ...e,
+                  games: a,
+                  relatedCategories: i,
+                  alternates: s
+                }
+              }
+            }),
+            getCategories: e.query({
+              query: ({
+                site: e,
+                list: t,
+                device: r,
+                geo: a
+              }) => `/list/category/${t}${e.id}?site=${e.id}&device=${r}&country=${a}&offset=0&limit=40`,
+              transformResponse: (e, t, r) => {
+                const {
+                  content: a
+                } = e;
+                return a.map((e => (0, n.rL)(r.site, "category", e)))
+              }
+            }),
+            getGame: e.query({
+              query: ({
+                site: e,
+                slug: t,
+                device: r,
+                geo: a,
+                experiment: i,
+                pageType: s,
+                path: o
+              }) => {
+                if ("preview" === s || "mystery" === s) {
+                  const t = o.split("/");
+                  let i, n;
+                  if ("mystery" === s) {
+                    const e = atob(t[3]);
+                    [i, n] = e.split("/")
+                  } else [i, n] = [t[3], t[4]];
+                  return i && n ? `/previewgame/${i}/${n}?country=${a}&device=${r}&site=${e.id}` : {
+                    url: null
+                  }
+                }
+                return `/game/${encodeURIComponent(t)}?site=${e.id}&device=${r}&country=${a}${i?`&experiment=${i}`:""}`
+              },
+              transformResponse: (e, t, r) => {
+                var a;
+                if (!e) throw new Error(`Game ${null==r?void 0:r.path} not found`);
+                if ("mystery" === r.pageType) {
+                  const t = r.path.split("/"),
+                    a = atob(t[3]);
+                  e.orientation = a.split("/")[2] || "both", e.image.path = m
+                }
+                const {
+                  categories: i,
+                  related_categories: s,
+                  related_games: o
+                } = e, l = i ? i.map((e => (0, n.rL)(r.site, "category", e))) : [], g = s ? s.map((e => (0, n.rL)(r.site, "category", e))) : [], c = "mobile" === r.device ? (0, n.oI)(o) : o, y = c ? c.map((e => (0, n.rL)(r.site, "game", e))) : [], d = e.alternative_game ? (0, n.rL)(r.site, "game", e.alternative_game) : null, p = e.alternative_category ? (0, n.rL)(r.site, "category", e.alternative_category) : null, $ = (0, u.uZ)("game", e.alternate_sites);
+                delete e.related_categories, delete e.related_games;
+                const v = {
+                  path: (null == e || null === (a = e.image) || void 0 === a ? void 0 : a.path) || m
+                };
+                return {
+                  ...e,
+                  alternative_game: d,
+                  alternative_category: p,
+                  categories: l,
+                  relatedCategories: g,
+                  relatedGames: y,
+                  alternates: $,
+                  image: v
+                }
+              }
+            }),
+            getGamesByIDs: e.query({
+              query: ({
+                site: e,
+                ids: t,
+                geo: r
+              }) => `/games/?site=${e.id}&id=${t.join(",")}&country=${r}`,
+              transformResponse: (e, t, r) => {
+                if (!e) return [];
+                return e.map((e => (0, n.rL)(r.site, "game", e)))
+              }
+            }),
+            getUserGameHistory: e.query({
+              queryFn: async ({
+                site: e
+              }) => {
+                const t = `${g}/players/history?site=3&country=NL`,
+                  r = await fetch(t, {
+                    credentials: "include"
+                  });
+                if (!r.ok) throw new Error("Failed to fetch user games");
+                return {
+                  data: (await r.json()).data.map((e => ({
+                    id: e.id,
+                    ...e.attributes
+                  }))).map((t => (0, n.rL)(e, "game", t)))
+                }
+              }
+            })
+          })
+        }),
+        {
+          useGetLocalisationsQuery: y,
+          useGetLocalisationQuery: d,
+          useGetHomepageQuery: p,
+          useGetPopularSearchesQuery: $,
+          useGetImvitaConfigsQuery: v,
+          useGetCategoryQuery: _,
+          useGetCategoriesQuery: f,
+          useGetGameQuery: L,
+          useGetGamesByIDsQuery: q,
+          useGetUserGameHistoryQuery: G
+        } = c
+    }
+  }
+]);
+//# sourceMappingURL=client~main-a4fc0d9e~8e414a9b710698d042c6.js.map

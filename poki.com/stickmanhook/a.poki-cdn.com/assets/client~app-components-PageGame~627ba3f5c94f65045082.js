@@ -1,0 +1,392 @@
+"use strict";
+(self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([
+  [1509], {
+    30252: (e, t, s) => {
+      s.r(t), s.d(t, {
+        default: () => K
+      });
+      var r = s(17402),
+        n = s(65676),
+        i = s(68154),
+        o = s(80243),
+        a = s(34164),
+        l = s(37084),
+        d = s(25362),
+        c = s(35530),
+        m = s(18967),
+        p = s(58147),
+        h = s(92413),
+        v = s(40827),
+        u = s(61481),
+        y = s(23260),
+        g = s(71219),
+        _ = s(42891),
+        A = s(15203),
+        k = s(90385),
+        Y = s(53210),
+        f = s(91323),
+        b = s(98708),
+        x = s(11436),
+        N = s(82552),
+        D = s(60685),
+        G = s(41951),
+        S = s(95901);
+      const q = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-Description-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!s.m[t]
+          },
+          importAsync: () => Promise.all([s.e(4810), s.e(8707), s.e(6448)]).then(s.bind(s, 25069)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return s(t)
+          },
+          resolve() {
+            return 25069
+          }
+        }),
+        w = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-contentTypes-GameUnavailable-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!s.m[t]
+          },
+          importAsync: () => Promise.all([s.e(1299), s.e(9936), s.e(1430), s.e(6151)]).then(s.bind(s, 81476)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return s(t)
+          },
+          resolve() {
+            return 81476
+          }
+        }),
+        M = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-ExternallyHostedCommunication-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!s.m[t]
+          },
+          importAsync: () => Promise.all([s.e(4810), s.e(4712), s.e(5389)]).then(s.bind(s, 96768)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return s(t)
+          },
+          resolve() {
+            return 96768
+          }
+        }),
+        L = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-MysteryTile-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!s.m[t]
+          },
+          importAsync: () => Promise.all([s.e(2505), s.e(6433)]).then(s.bind(s, 12748)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return s(t)
+          },
+          resolve() {
+            return 12748
+          }
+        }),
+        T = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-SummaryTile-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!s.m[t]
+          },
+          importAsync: () => Promise.all([s.e(6832), s.e(2505), s.e(7306)]).then(s.bind(s, 8115)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return s(t)
+          },
+          resolve() {
+            return 8115
+          }
+        }),
+        $ = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-CategoryTile-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!s.m[t]
+          },
+          importAsync: () => Promise.all([s.e(6832), s.e(9853), s.e(7526)]).then(s.bind(s, 16259)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return s(t)
+          },
+          resolve() {
+            return 16259
+          }
+        }),
+        C = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-contentTypes-TitleBox-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!s.m[t]
+          },
+          importAsync: () => Promise.all([s.e(3255), s.e(9452)]).then(s.bind(s, 49431)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return s(t)
+          },
+          resolve() {
+            return 49431
+          }
+        }),
+        F = (0, o.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-NavigationAwareLazyHydrate-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!s.m[t]
+          },
+          importAsync: () => s.e(4741).then(s.bind(s, 25144)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return s(t)
+          },
+          resolve() {
+            return 25144
+          }
+        }),
+        R = "game",
+        j = ({
+          game: e,
+          gameID: t,
+          isMobile: s,
+          canShowMysteryGame: r
+        }) => {
+          var n, i;
+          const o = !s || s && e.mobile_file ? (0, S.Y)(m.default, {}, `GameContainer-${t}`) : (0, S.Y)(w, {}, `GameUnavailable-${t}`),
+            l = null == e || null === (n = e.relatedGames) || void 0 === n ? void 0 : n.map(((e, t) => (0, S.Y)(T, {
+              className: `ir${t}`,
+              idx: t,
+              isMobile: s,
+              data: e,
+              list: "related",
+              componentKey: R
+            }, `related-game-${e.id}`)));
+          r && l.splice(16 + Math.floor(10 * Math.random()), 0, (0, S.Y)(L, {}));
+          const d = null == e || null === (i = e.relatedCategories) || void 0 === i ? void 0 : i.map(((e, t) => {
+              const s = "basic-category";
+              return (0, S.Y)($, {
+                data: e,
+                contentType: s,
+                list: s,
+                idx: t
+              }, `c-${e.id}`)
+            })),
+            c = s ? [(0, S.Y)("div", {
+              className: G.pageGame__externallyHostedCommunication,
+              children: (0, S.Y)(M, {})
+            })] : [];
+          return [...s ? [(0, S.Y)(C, {
+            title: e.title,
+            developer: e.developer,
+            className: G.pageGame__titleBox
+          })] : [], ...c, (0, S.Y)("div", {
+            className: (0, a.A)(G.pageGame__gameWrapper, {
+              [G.pageGame__gameWrapper_mobile]: s
+            }),
+            children: o
+          }), (0, S.Y)(F, {
+            whenIdle: !0,
+            children: l
+          }), (0, S.Y)(F, {
+            whenVisible: !0,
+            children: d
+          })]
+        },
+        E = 30067;
+
+      function I({
+        gameID: e,
+        isMobile: t,
+        pageType: s
+      }) {
+        return !t && e !== E && "preview" !== s
+      }
+
+      function K() {
+        var e;
+        const t = (0, n.wA)(),
+          {
+            slug: s
+          } = (0, l.g)(),
+          {
+            isMobile: o
+          } = (0, r.useContext)(d.F),
+          m = (0, n.d4)(_.xp),
+          w = (0, n.d4)(_.wu),
+          M = (0, n.d4)(Y.p),
+          L = (0, n.d4)(f.Gd),
+          T = (0, n.d4)(b.K),
+          $ = (0, n.d4)(x.k4),
+          C = (0, n.d4)(k.K5),
+          {
+            data: R,
+            isUninitialized: E,
+            isLoading: K,
+            isFetching: O,
+            isSuccess: P,
+            isError: H
+          } = (0, u.gM)({
+            slug: s,
+            site: L,
+            device: m,
+            geo: w,
+            experiment: M,
+            pageType: C,
+            path: $
+          }, {
+            skip: !("preview" === C || "mystery" === C || "game" === C)
+          }),
+          U = !E && !K && !O && P;
+        if (H) return (0, S.Y)(c.default, {});
+        if (!U) return (0, S.Y)(h.default, {});
+        const B = (0, n.d4)(v.A.desktop.desktop_gp_728x90),
+          z = (0, n.d4)(v.A.desktop.desktop_gp_300x250),
+          V = (0, n.d4)(v.A.desktop.desktop_gp_160x600),
+          W = (0, n.d4)(g.iM),
+          J = (0, n.d4)(A.ht),
+          Q = null == R ? void 0 : R.id,
+          X = !!W && "object" == typeof W,
+          Z = I({
+            gameID: Q,
+            isMobile: o,
+            pageType: C
+          }),
+          ee = null == W || null === (e = W.config) || void 0 === e || null === (e = e.trackingUrl) || void 0 === e ? void 0 : e.replace("[timestamp]", Date.now()),
+          te = (null == R ? void 0 : R.alternates) || [];
+        (0, r.useEffect)((() => {
+          $ && t((0, y.y)({
+            path: $,
+            pageType: C,
+            pageID: Q,
+            pokifordevs_team_id: null == R ? void 0 : R.pokifordevs_team_id,
+            developer: null == R ? void 0 : R.developer
+          }))
+        }), [$]);
+        const se = (0, r.useMemo)((() => j({
+            game: R,
+            gameID: Q,
+            hasTakeover: X,
+            isMobile: o,
+            canShowMysteryGame: J
+          })), [Q, X]),
+          re = (0, r.useMemo)((() => (0, N.Lj)(L, T, C, {
+            game: R
+          })), [Q]);
+        return (0, S.FD)(S.FK, {
+          children: [!(null == re || !re.jsonLD) && (0, S.Y)("script", {
+            type: "application/ld+json",
+            dangerouslySetInnerHTML: {
+              __html: JSON.stringify(re.jsonLD)
+            }
+          }), (0, S.FD)(i.m, {
+            children: [re.meta.title && (0, S.Y)("title", {
+              children: re.meta.title
+            }), R.unlisted && (0, S.Y)("meta", {
+              name: "robots",
+              content: "nosnippet"
+            }), (0, S.Y)("meta", {
+              name: "keywords",
+              content: R.title
+            }), re.meta.description && (0, S.Y)("meta", {
+              name: "description",
+              content: re.meta.description
+            }), (0, S.Y)("link", {
+              rel: "canonical",
+              href: re.meta.canonical
+            }, "canonical"), te.map((({
+              href: e,
+              hrefLang: t
+            }) => (0, S.Y)("link", {
+              rel: "alternate",
+              href: e,
+              hrefLang: t
+            }, t))), re.og && Object.entries(re.og).map((([e, t]) => (0, S.Y)("meta", {
+              property: `og:${e}`,
+              content: t.toString()
+            }, `og:${e}`))), re.twitter && Object.entries(re.twitter).map((([e, t]) => (0, S.Y)("meta", {
+              property: `twitter:${e}`,
+              content: t
+            }, `twitter:${e}`)))]
+          }), (0, S.FD)("div", {
+            className: (0, a.A)(D.pageGrid, {
+              [G.pageGame_mobile]: o
+            }, {
+              [G.pageGame_desktop]: !o
+            }, {
+              [G.pageGame_desktop_hasTakeover]: X && !o
+            }),
+            children: [se, Z && (0, S.FD)(S.FK, {
+              children: [(0, S.Y)(p.default, {
+                className: G.pageGame__advertisementA79,
+                data: B
+              }, "advertisement-desktop_gp_728x90"), (0, S.Y)(p.default, {
+                className: G.pageGame__advertisementA32,
+                data: z
+              }, "advertisement-desktop_gp_300x250"), (0, S.Y)(p.default, {
+                className: G.pageGame__advertisementA16,
+                data: V
+              }, "advertisement-desktop_gp_160x600")]
+            })]
+          }), !!re.description && (0, S.Y)(F, {
+            whenVisible: !0,
+            children: (0, S.Y)(q, {
+              data: re.description
+            })
+          }), !!ee && (0, S.Y)("img", {
+            className: G.pageGame__pixel,
+            src: ee,
+            alt: ""
+          })]
+        })
+      }
+    }
+  }
+]);
+//# sourceMappingURL=client~app-components-PageGame~627ba3f5c94f65045082.js.map

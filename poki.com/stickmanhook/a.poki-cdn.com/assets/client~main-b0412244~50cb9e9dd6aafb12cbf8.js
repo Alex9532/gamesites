@@ -1,0 +1,533 @@
+"use strict";
+(self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([
+  [8526], {
+    17615: (e, t, o) => {
+      o.d(t, {
+        A: () => y
+      });
+      var n = o(80243),
+        i = o(37084),
+        s = o(59908),
+        r = o(88942),
+        c = o(42495),
+        a = o(92413),
+        l = o(70335),
+        d = o(40890),
+        u = o(95901);
+      const p = (0, n.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-PageHome-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!o.m[t]
+          },
+          importAsync: () => o.e(7258).then(o.bind(o, 47671)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return o(t)
+          },
+          resolve() {
+            return 47671
+          }
+        }, {
+          fallback: (0, u.Y)(r.default, {})
+        }),
+        h = (0, n.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-PageCategory-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!o.m[t]
+          },
+          importAsync: () => o.e(4307).then(o.bind(o, 52262)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return o(t)
+          },
+          resolve() {
+            return 52262
+          }
+        }, {
+          fallback: (0, u.Y)(c.default, {})
+        }),
+        V = (0, n.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-PageGame-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!o.m[t]
+          },
+          importAsync: () => Promise.all([o.e(2491), o.e(1608), o.e(439), o.e(6124), o.e(3427), o.e(1509)]).then(o.bind(o, 30252)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return o(t)
+          },
+          resolve() {
+            return 30252
+          }
+        }, {
+          fallback: (0, u.Y)(a.default, {})
+        }),
+        m = (0, n.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-PageError-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!o.m[t]
+          },
+          importAsync: () => o.e(3427).then(o.bind(o, 35530)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return o(t)
+          },
+          resolve() {
+            return 35530
+          }
+        }, {
+          fallback: (0, u.Y)(l.default, {})
+        }),
+        v = (0, n.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-PageContent-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!o.m[t]
+          },
+          importAsync: () => Promise.all([o.e(3277), o.e(9830)]).then(o.bind(o, 94147)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return o(t)
+          },
+          resolve() {
+            return 94147
+          }
+        }, {
+          fallback: (0, u.Y)(l.default, {})
+        }),
+        A = (0, n.Ay)({
+          resolved: {},
+          chunkName: () => "app-components-privacyCenter-PrivacyCenter-tsx",
+          isReady(e) {
+            const t = this.resolve(e);
+            return !0 === this.resolved[t] && !!o.m[t]
+          },
+          importAsync: () => Promise.all([o.e(5816), o.e(4810), o.e(2610), o.e(1942), o.e(3715), o.e(7472), o.e(9803), o.e(520), o.e(1245), o.e(7901), o.e(1331), o.e(985), o.e(9530), o.e(4448), o.e(9251), o.e(6138), o.e(8134), o.e(2834), o.e(8907), o.e(6234), o.e(1908), o.e(2145), o.e(9355), o.e(4376), o.e(3783), o.e(1169), o.e(5811), o.e(4930), o.e(2149), o.e(3812), o.e(6862), o.e(1279), o.e(1135), o.e(910), o.e(4795), o.e(1627), o.e(1295), o.e(9349), o.e(9429), o.e(135), o.e(4166), o.e(1056), o.e(7564)]).then(o.bind(o, 57126)),
+          requireAsync(e) {
+            const t = this.resolve(e);
+            return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+          },
+          requireSync(e) {
+            const t = this.resolve(e);
+            return o(t)
+          },
+          resolve() {
+            return 57126
+          }
+        }, {
+          fallback: (0, u.Y)(l.default, {})
+        });
+
+      function y({
+        ssrPath: e,
+        ssrSearch: t,
+        site: o
+      }) {
+        return (0, u.Y)(i.Ix, {
+          ssrPath: e,
+          ssrSearch: t,
+          hook: s.ZD,
+          children: (0, u.FD)(i.dO, {
+            children: [(0, u.Y)(i.qh, {
+              path: `${(0,d.AO)(o,"home","")}`,
+              component: p
+            }), (0, u.Y)(i.qh, {
+              nest: !0,
+              path: `${(0,d.AO)(o,"game",":slug")}`,
+              component: V
+            }), (0, u.Y)(i.qh, {
+              nest: !0,
+              path: `${(0,d.AO)(o,"content",":slug")}`,
+              component: v
+            }), (0, u.Y)(i.qh, {
+              nest: !0,
+              path: `${(0,d.AO)(o,"preview",":slug")}`,
+              component: V
+            }), (0, u.Y)(i.qh, {
+              nest: !0,
+              path: `${(0,d.AO)(o,"mystery",":slug")}`,
+              component: V
+            }), (0, u.Y)(i.qh, {
+              nest: !0,
+              path: `${(0,d.AO)(o,"privacy","")}`,
+              component: A,
+              children: (0, u.Y)(i.qh, {
+                path: "/:slug",
+                component: A
+              })
+            }), (0, u.Y)(i.qh, {
+              path: `${(0,d.AO)(o,"category",":slug")}`,
+              component: h
+            }), (0, u.Y)(i.qh, {
+              component: m
+            })]
+          })
+        })
+      }
+    },
+    46278: (e, t, o) => {
+      o.d(t, {
+        Ay: () => l,
+        E5: () => h,
+        G6: () => a,
+        T5: () => u,
+        Vy: () => p,
+        gE: () => d
+      });
+      var n = o(54200),
+        i = o(67893),
+        s = o(34317);
+      const r = "undefined" != typeof XMLHttpRequest ? XMLHttpRequest : o.n(s)();
+
+      function c(e, t, o = {}, i = !1) {
+        const s = `${e}${t}`;
+        return i ? fetch(s, o) : (0, n.R)({
+          createXHR: () => new r,
+          url: s,
+          ...o,
+          crossDomain: !0
+        })
+      }
+
+      function a() {
+        let e = {
+          acceptance: "https://api-acceptance.poki.io",
+          production: "https://api.poki.com",
+          local: "http://localhost:10019",
+          kiosk: "/api"
+        };
+        "undefined" == typeof window && "cluster" === process.env.DEPLOY_ENV && (e = {
+          ...e,
+          acceptance: "http://content.mothership.svc.cluster.local",
+          production: "http://content.mothership.svc.cluster.local"
+        }), "undefined" == typeof window && "string" == typeof process.env.OVERWRITE_API_LOCATION && (e = Object.keys(e).reduce(((e, t) => (e[t] = process.env.OVERWRITE_API_LOCATION, e)), {}));
+        return e[(0, i.jG)()] || "https://api.poki.com"
+      }
+
+      function l(e, t, o = !1) {
+        return c(a(), e, t, o)
+      }
+
+      function d() {
+        let e = {
+          acceptance: "https://poki-auth-acceptance.poki.io",
+          production: "https://poki-auth.poki.com",
+          local: "http://localhost:3005"
+        };
+        "undefined" == typeof window && "cluster" === process.env.DEPLOY_ENV && (e = {
+          acceptance: "http://kratos.mothership.svc.cluster.local",
+          production: "http://kratos.mothership.svc.cluster.local",
+          local: "http://localhost:3005"
+        });
+        return e[(0, i.jG)()] || "https://poki-auth.poki.com"
+      }
+
+      function u() {
+        let e = {
+          acceptance: "https://user-vault-acceptance.poki.io",
+          production: "https://user-vault.poki.com",
+          local: "http://localhost:3000"
+        };
+        "undefined" == typeof window && "cluster" === process.env.DEPLOY_ENV && (e = {
+          acceptance: "http://user-vault.mothership.svc.cluster.local",
+          production: "http://user-vault.mothership.svc.cluster.local",
+          local: "http://localhost:3000"
+        });
+        return e[(0, i.jG)()] || "https://user-vault.poki.com"
+      }
+
+      function p(e, t) {
+        const o = {
+          acceptance: "https://vote-acceptance.poki.io",
+          production: "https://vote.poki.io",
+          local: "http://localhost:10066"
+        };
+        return c(o[(0, i.jG)()] || o.production, e, t)
+      }
+
+      function h(e, t) {
+        return c("https://t.poki.io", e, t)
+      }
+    },
+    28933: (e, t, o) => {
+      o.d(t, {
+        J: () => s
+      });
+      var n = o(35190);
+      const i = e => ["US", "CA", "DE", "BR", "FR", "AU", "MX", "JP", "ES", "CH", "PL", "KR", "GB", "BE", "IT", "AE", "NL", "SE", "DK", "SA", "NZ", "RO", "ZA", "TH", "AT", "NO", "MY", "CL", "SG", "CZ", "IL", "HU", "FI", "SK", "IE", "HK", "BG", "PT", "UY", "TW", "CR", "GR", "OM", "PR", "JO", "PA", "HR", "UZ", "KE", "KW", "LV", "LU", "SI", "EE", "MM", "QA", "LT", "BH", "IS", "JM", "TT", "NA", "MT", "BS", "MO", "AW", "AS", "VI", "KY", "LI", "BQ", "JE", "BM", "PW", "VG", "GG", "MP", "MC", "NU", "NF", "TV"].includes(e);
+
+      function s(e, t) {
+        return [n.G.ON, n.G.PBS_DPF_CSTS, n.G.PBS_ONLY].includes(e) && i(t)
+      }
+    },
+    53490: (e, t, o) => {
+      o.d(t, {
+        Y: () => n
+      });
+      class n {
+        isReady = !1;
+        constructor() {
+          this.audioElement = document.createElement("audio"), this.audioElement.preload = "auto", this.audioElement.src = "data:audio/mpeg;base64,/+MYxAALWDXcoV4AAiAMq+aGT7h2ObUH6N+wfrm9R3XRzGu4WkYJ45pjZhkmECIKYXIAJgxA3GEEBcrQAA+AF1vMRDCtjCSA/+MYxA0JiC5BQZ8AAFt8//sAxMRRBjDBKgB/zwhw7AwF0D/AACRVNon1Uj9Ya5I0v0ksMAHFJTGCBT0w6IGxMCNBnDBwQVow/+MYxCEMEDYQAd8AADDAVjAMAG8wIYBpDgF1OpUwoEahNi89yzhvi6UxS0U6MHkC7TA2wdIy1MxCwjGZvMhhUmRI0OhmqjMi/+MYxCsKCDXQAP8eAEs+POM/LzdbUFUzGoNEMW1BITDUgIw4pHM14IYzzKkxrI0wqFQEgyClMYXQfjdJ/vw8pczYMhEE6zDP/+MYxD0KqDWYAP9YAELAMHQBsTjcGNHJkxKKjCgNMZhIBCkdSjITA2o5EnviPzPoODMLx8kw44SSMKJCtz+18OM2M4dEjWCe/+MYxE0KWDWEAP8eADRY7MUBIEXVTEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV/+MYxF4KiDVIAP8gAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV", this.audioElement.load()
+        }
+        async prepare() {
+          if (this.isReady) return;
+          const e = async () => {
+            try {
+              this.audioElement.volume = 0, await this.audioElement.play(), await new Promise((e => {
+                setTimeout(e, 1)
+              })), await this.audioElement.pause(), this.audioElement.volume = 1, this.isReady = !0, document.removeEventListener("touchstart", e), document.removeEventListener("keydown", e), document.removeEventListener("mousedown", e)
+            } catch (e) {
+              console.error("Failed to prepare audio", e)
+            }
+          };
+          document.addEventListener("touchstart", e, {
+            once: !0
+          }), document.addEventListener("keydown", e, {
+            once: !0
+          }), document.addEventListener("mousedown", e, {
+            once: !0
+          })
+        }
+        async play(e) {
+          if (this.isReady) try {
+            this.audioElement.src = e, await this.audioElement.play()
+          } catch (e) {
+            console.error("Failed to play audio", e)
+          } else console.warn("Audio not prepared. Call prepare() first")
+        }
+        getCurrentTime() {
+          return this.audioElement.currentTime
+        }
+        stop() {
+          this.audioElement.pause(), this.audioElement.currentTime = 0
+        }
+        setVolume(e) {
+          this.audioElement.volume = Math.max(0, Math.min(1, e))
+        }
+      }
+    },
+    8811: (e, t, o) => {
+      o.d(t, {
+        V: () => n
+      });
+      const n = {
+        default: {
+          style: "default"
+        },
+        preview: {
+          color: "var(--grey-7)",
+          image: "https://a.poki-cdn.com/images/bg-diamante-lowpo.svg",
+          style: "tile"
+        },
+        mystery: {
+          color: "var(--yellow-8)",
+          imageLeft: "https://a.poki-cdn.com/cdn-cgi/image/f=auto,quality=78/images/bg-playtest-left.png",
+          imageRight: "https://a.poki-cdn.com/cdn-cgi/image/f=auto,quality=78/images/bg-playtest-right.png",
+          style: "dual-cover"
+        }
+      }
+    },
+    80382: (e, t, o) => {
+      o.d(t, {
+        NH: () => r,
+        oI: () => s,
+        rL: () => i
+      });
+      var n = o(40890);
+
+      function i(e, t, {
+        id: o,
+        developer: i,
+        slug: s,
+        image: r,
+        image_alt: c,
+        mobile: a,
+        title: l,
+        media: d,
+        is_new: u,
+        animated_thumbnail: p,
+        iab_categories: h
+      }) {
+        let V;
+        if (d) {
+          var m;
+          const e = d.filter((e => "video" === e.type));
+          e.length > 1 && e.sort(((e, t) => (null == e ? void 0 : e.position) > (null == t ? void 0 : t.position) ? 1 : -1)), V = null === (m = e[0]) || void 0 === m ? void 0 : m.path
+        }
+        return {
+          id: o,
+          developer: i,
+          mobile: a,
+          title: l,
+          type: t,
+          image: r,
+          imageAlt: c,
+          url: (0, n.AO)(e, t, s),
+          slug: s,
+          video: V,
+          isNew: u,
+          animatedThumbnail: p,
+          iabCategories: h
+        }
+      }
+
+      function s(e) {
+        return e.filter((e => e.mobile))
+      }
+
+      function r(e = "desktop", t) {
+        return "mobile" === e ? [...t].sort(((e, t) => e.mobile === t.mobile ? 0 : e.mobile ? -1 : 1)) : t
+      }
+    },
+    17782: (e, t, o) => {
+      function n(e) {
+        const t = `poki/${e}`,
+          o = e => ({
+            type: t,
+            ...e
+          });
+        return o.type = t, o
+      }
+      o.d(t, {
+        A: () => n
+      })
+    },
+    58606: (e, t, o) => {
+      o.d(t, {
+        A: () => s
+      });
+      var n = o(46278);
+      const i = {
+        api: n.Ay,
+        vote: n.Vy,
+        tracking: n.E5
+      };
+
+      function s(e = "api") {
+        return i[e]
+      }
+    },
+    16345: (e, t, o) => {
+      o.d(t, {
+        A: () => n
+      });
+      const n = () => ({
+        width: window.innerWidth || window.document.documentElement.clientWidth || window.document.body.clientWidth,
+        height: window.innerHeight || window.document.documentElement.clientHeight || window.document.body.clientHeight
+      })
+    },
+    46493: (e, t, o) => {
+      o.d(t, {
+        F: () => s
+      });
+      var n = o(574);
+      const i = "undefined" != typeof window && new URLSearchParams(window.location.search).has("verboseLogging");
+
+      function s({
+        category: e,
+        action: t,
+        label: o,
+        data: s,
+        options: r
+      }) {
+        var c, a;
+        if ("undefined" == typeof window) return;
+        const l = window;
+        if (l.context = (0, n.K)(l.store.getState()), i && console.info(`[pushEvent] ${e} ${t} ${o}`, s, r), (null === (c = l.context) || void 0 === c || !c.isPokiAnalyticsEnabled) && "settingsUpdated" !== t) return;
+        let d = `${e}-${t}`;
+        t || (d = e), o && (d += `-${o}`), null === (a = l.pokiGTM) || void 0 === a || a.push({
+          event: d,
+          category: e,
+          action: t,
+          label: o,
+          data: s || {},
+          options: r || {}
+        })
+      }
+    },
+    40018: (e, t, o) => {
+      o.d(t, {
+        A: () => m
+      });
+      var n = o(20038),
+        i = o(86525),
+        s = o(93045),
+        r = o(91323),
+        c = o(15362),
+        a = o(43908),
+        l = o(61481),
+        d = o(48554),
+        u = o(88800),
+        p = o(58606),
+        h = o(16536),
+        V = o(28469);
+
+      function m(e, t, m) {
+        const v = (0, i.C)({
+            dependencies: {
+              createApi: p.A
+            }
+          }),
+          {
+            createReduxHistory: A,
+            routerMiddleware: y
+          } = (0, s.a1)({
+            history: e
+          }),
+          w = (0, c.A)(e),
+          f = (0, n.U1)({
+            reducer: w,
+            middleware: e => e({
+              serializableCheck: {
+                ignoredActions: [d.wZ.type, u.Gg.type],
+                ignoredPaths: ["notifications"]
+              }
+            }).prepend(h.LP.middleware).concat([y, v, l.lh.middleware]),
+            preloadedState: (0, V.R)(m),
+            enhancers: e => e()
+          });
+        return "undefined" != typeof window && (window.store = f, (0, a.l0)((0, r.n)(f.getState()))), A(f), "function" == typeof t && v.run(t), "undefined" != typeof window && o.e(4368).then(o.bind(o, 4368)).then((({
+          fireCombinedAsyncEpics: e
+        }) => {
+          "function" == typeof requestIdleCallback ? requestIdleCallback((() => {
+            e()
+          }), {
+            timeout: 2e3
+          }) : setTimeout((() => {
+            e()
+          }), 1)
+        })), f
+      }
+    }
+  }
+]);
+//# sourceMappingURL=client~main-b0412244~50cb9e9dd6aafb12cbf8.js.map

@@ -1,0 +1,970 @@
+"use strict";
+(self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([
+  [3946], {
+    89385: (e, t, a) => {
+      a.d(t, {
+        Ay: () => _,
+        Cf: () => b,
+        Ep: () => p,
+        Fh: () => v,
+        Gw: () => y,
+        IT: () => u,
+        Jk: () => l,
+        QF: () => g,
+        V1: () => w,
+        hK: () => A,
+        iJ: () => d,
+        ij: () => m,
+        qf: () => S
+      });
+      var s = a(20038),
+        o = a(10179),
+        n = a(7696),
+        i = a(16536),
+        c = a(46493),
+        r = a(52694);
+      const l = e => e.account.enabled,
+        d = e => e.account.status,
+        u = e => e.account.session,
+        g = e => e.account.flow,
+        m = e => e.account.isPanelVisible,
+        p = e => 200 === e.account.status,
+        y = e => e.account.wasLoggedInBefore,
+        v = e => e.account.disabledSaveGames,
+        f = (0, s.Z0)({
+          name: "account",
+          initialState: {
+            enabled: !1,
+            status: null,
+            session: null,
+            flow: null,
+            isPanelVisible: !1,
+            wasLoggedInBefore: !1,
+            disabledSaveGames: [],
+            hasPasskeySupport: !0
+          },
+          reducers: {
+            setEnableAccount: (e, t) => {
+              e.enabled = t.payload.enabled
+            },
+            toggleAccountPanel: e => {
+              var t, a;
+              (e.isPanelVisible = !e.isPanelVisible, e.isPanelVisible) || (null === (t = window.frames) || void 0 === t || null === (t = t.gameFrame) || void 0 === t || null === (a = t.postMessage) || void 0 === a || a.call(t, {
+                type: "pokiAccountsAuthPanelClosed"
+              }, "*"))
+            },
+            setWasLoggedInBefore: e => {
+              e.wasLoggedInBefore = !0
+            },
+            setFlow: (e, t) => {
+              let a = t.payload.flowData;
+              const s = (e => e.account.hasPasskeySupport)({
+                account: e
+              });
+              a = (0, r.py)(a), s || (a = (0, r.rn)(a)), e.flow = a
+            },
+            setDisabledSaveGames: (e, t) => {
+              e.disabledSaveGames.includes(t.payload.gameID) || e.disabledSaveGames.push(t.payload.gameID)
+            },
+            setHasPasskeySupport: (e, t) => {
+              e.hasPasskeySupport = t.payload.hasPasskeySupport
+            }
+          },
+          extraReducers: e => {
+            e.addCase(o.sx.fulfilled, ((e, t) => {
+              var a;
+              e.session = t.payload, e.status = 200, null != t && null !== (a = t.payload) && void 0 !== a && null !== (a = a.identity) && void 0 !== a && a.birthdate || (e.isPanelVisible = !0)
+            })), e.addCase(o.sx.rejected, (e => {
+              e.session = null, e.status = 401
+            }))
+          }
+        }),
+        {
+          setEnableAccount: h,
+          toggleAccountPanel: S,
+          setFlow: w,
+          setWasLoggedInBefore: b,
+          setHasPasskeySupport: k,
+          setDisabledSaveGames: A
+        } = f.actions;
+      (0, i.Zv)({
+        actionCreator: o.sx.fulfilled,
+        effect: (e, t) => {
+          var a, s;
+          const i = t.getState(),
+            r = u(i),
+            l = null == r || null === (a = r.identity) || void 0 === a ? void 0 : a.ad_mode,
+            d = null == r || null === (s = r.identity) || void 0 === s ? void 0 : s.is_first_login,
+            g = (null == r ? void 0 : r.authentication_method) || "unknown";
+          "personalized" !== l && t.dispatch((0, n.Yt)({
+            toggle: !0
+          })), t.dispatch(b()), d ? ((0, c.F)({
+            category: "account",
+            action: "registerSuccess",
+            label: g
+          }), t.dispatch((0, o.jE)())) : (0, c.F)({
+            category: "account",
+            action: "loginSuccess",
+            label: g
+          })
+        }
+      }), (0, i.Zv)({
+        actionCreator: o.sx.rejected,
+        effect: async (e, t) => {
+          const a = await (0, r.ec)();
+          t.dispatch(k({
+            hasPasskeySupport: a
+          })), (0, c.F)({
+            category: "account",
+            action: "hasPasskeySupport",
+            label: a ? "true" : "false"
+          })
+        }
+      });
+      const _ = f
+    },
+    18864: (e, t, a) => {
+      a.d(t, {
+        Ay: () => f,
+        rv: () => y
+      });
+      var s = a(20038),
+        o = a(43346),
+        n = a(23260),
+        i = a(90385),
+        c = a(8811),
+        r = a(89625),
+        l = a(16536);
+      const d = ["immersiveTakeover", "custom", "apiOverride", "base"],
+        u = {
+          base: c.V.default,
+          apiOverride: null,
+          immersiveTakeover: null
+        },
+        g = (0, s.Z0)({
+          name: "background",
+          initialState: u,
+          reducers: {
+            unsetBackground: () => u,
+            setBackground: (e, t) => {
+              const {
+                layer: a,
+                background: s
+              } = t.payload;
+              e[a] = s
+            }
+          },
+          selectors: {
+            selectBackground: e => {
+              let t = e.base;
+              return Object.values(d).some((a => !!e[a] && (t = e[a], !0))), t
+            },
+            selectIsImmersiveTakeover: e => null !== e.immersiveTakeover
+          }
+        }),
+        {
+          unsetBackground: m,
+          setBackground: p
+        } = g.actions,
+        {
+          selectBackground: y,
+          selectIsImmersiveTakeover: v
+        } = g.selectors;
+      (0, l.Zv)({
+        matcher: (0, s.i0)(n.y),
+        effect: (e, t) => {
+          const a = t.getState(),
+            s = (0, i.K5)(a),
+            o = y(a);
+          if (null == o || !o.sticky)
+            if ("preview" !== s)
+              if ("mystery" !== s)
+                if ("game" !== s)
+                  if ("category" !== s) t.dispatch(m());
+                  else {
+                    const e = (0, i.N2)(a),
+                      s = (0, r.r)(e.id);
+                    t.dispatch(p({
+                      layer: "custom",
+                      background: s
+                    }))
+                  }
+          else {
+            const e = (0, i.Vv)(a),
+              s = (0, r.P)(e);
+            t.dispatch(p({
+              layer: "custom",
+              background: s
+            }))
+          } else {
+            const {
+              mystery: e
+            } = c.V;
+            t.dispatch(p({
+              layer: "custom",
+              background: e
+            }))
+          } else {
+            const {
+              preview: e
+            } = c.V;
+            t.dispatch(p({
+              layer: "custom",
+              background: e
+            }))
+          }
+        }
+      }), (0, l.Zv)({
+        type: o.jO.type,
+        effect: (e, t) => {
+          var a;
+          const {
+            background: s
+          } = (null == e || null === (a = e.takeover) || void 0 === a ? void 0 : a.config) || {};
+          s && t.dispatch(p({
+            layer: "immersiveTakeover",
+            background: {
+              ...s,
+              style: "dual-cover"
+            }
+          }))
+        }
+      }), (0, l.Zv)({
+        type: o.jp.type,
+        effect: (e, t) => {
+          t.dispatch(m())
+        }
+      });
+      const f = g.reducer
+    },
+    42891: (e, t, a) => {
+      a.d(t, {
+        Ay: () => H,
+        F8: () => u,
+        Fe: () => E,
+        Fu: () => k,
+        H6: () => F,
+        Jj: () => x,
+        KM: () => O,
+        Kk: () => $,
+        Kn: () => V,
+        Mh: () => Z,
+        Pl: () => b,
+        Rd: () => M,
+        SG: () => l,
+        W3: () => z,
+        Wv: () => R,
+        Xy: () => d,
+        Y1: () => g,
+        ac: () => D,
+        hG: () => A,
+        kW: () => T,
+        nx: () => h,
+        oJ: () => C,
+        pX: () => S,
+        qk: () => I,
+        rk: () => P,
+        vo: () => j,
+        wu: () => _,
+        xp: () => B,
+        zO: () => K,
+        zS: () => L,
+        zj: () => G
+      });
+      var s = a(20038),
+        o = a(1081),
+        n = a(36774),
+        i = a(91323);
+      const c = {
+          bot: !1,
+          cache: 0,
+          device: "desktop",
+          isIpadOS: !1,
+          isIos: !1,
+          visibility: !0,
+          history: [],
+          geo: "NL",
+          region: "NH",
+          ccpaApplies: !1,
+          host: "poki.com",
+          viewportOrientation: "portrait",
+          loadingPage: !1,
+          recentGames: [],
+          hydrated: !1,
+          asyncEpicFired: !1,
+          consentStatus: void 0,
+          usPrivacyString: "1---",
+          consistentRandomSeed: Math.random(),
+          externalGames: {},
+          privacyPopupRevision: "0",
+          isAdsBlockedVisible: !1,
+          trafficSource: !1
+        },
+        r = (0, s.Z0)({
+          name: "client",
+          initialState: c,
+          reducers: {
+            hydrated: e => {
+              e.hydrated = !0
+            },
+            fireAsyncEpics: e => {
+              e.asyncEpicFired = !0
+            },
+            setConsentStatus: (e, t) => {
+              e.consentStatus = t.payload.consentStatus
+            },
+            setUSPrivacyString: (e, t) => {
+              e.usPrivacyString = t.payload.usPrivacyString
+            },
+            setDevice: (e, t) => {
+              e.device = t.payload.device
+            },
+            setGeo: (e, t) => {
+              e.geo = t.payload.geo
+            },
+            setRegion: (e, t) => {
+              e.region = t.payload.region
+            },
+            setTrafficSource: (e, t) => {
+              e.trafficSource = t.payload.trafficSource
+            },
+            setHost: (e, t) => {
+              e.host = t.payload.host
+            },
+            setViewportOrientation: (e, t) => {
+              e.viewportOrientation = t.payload.orientation
+            },
+            storeRecentGame: (e, t) => {
+              const {
+                recentGames: a,
+                siteID: s
+              } = t.payload;
+              e.recentGames = {
+                ...e.recentGames,
+                [s]: a
+              }
+            },
+            setConsistentRandomSeed: (e, t) => {
+              e.consistentRandomSeed = t.payload.rand
+            },
+            setConsentExternalHostedGame: (e, t) => {
+              const {
+                gameId: a
+              } = t.payload;
+              e.externalGames = {
+                ...e.externalGames,
+                [a]: !0
+              }
+            },
+            setPrivacyPolicyNotificationRevision: (e, t) => {
+              e.privacyPopupRevision = t.payload.revision
+            },
+            setAdsBlockedVisible: (e, t) => {
+              e.isAdsBlockedVisible = t.payload.isVisible
+            }
+          }
+        }),
+        {
+          hydrated: l,
+          fireAsyncEpics: d,
+          setConsentStatus: u,
+          setUSPrivacyString: g,
+          setDevice: m,
+          setGeo: p,
+          setRegion: y,
+          setTrafficSource: v,
+          setHost: f,
+          setViewportOrientation: h,
+          storeRecentGame: S,
+          setConsistentRandomSeed: w,
+          setConsentExternalHostedGame: b,
+          setPrivacyPolicyNotificationRevision: k,
+          setAdsBlockedVisible: A
+        } = r.actions;
+
+      function _(e) {
+        return e.client.geo
+      }
+
+      function G(e) {
+        return e.client.region
+      }
+
+      function P(e) {
+        return e.client.viewportOrientation
+      }
+      const B = e => e.client.device;
+
+      function F(e) {
+        const {
+          device: t
+        } = e.client;
+        return "tablet" === t || "mobile" === t
+      }
+      const C = e => e.client.ccpaApplies,
+        I = (0, o.Mz)((e => e.client.geo), (e => n._k.includes(e))),
+        D = e => e.client.loadingPage && e.client.hydrated,
+        E = (0, o.Mz)(i.Gd, (e => e.client.recentGames), ((e, t) => e && t && t[e.id] ? t[e.id] : [])),
+        M = e => e.client.consistentRandomSeed,
+        L = e => e.client.isIpadOS,
+        z = e => e.client.isIos,
+        V = e => e.client.usPrivacyString;
+
+      function O(e, t) {
+        const {
+          externalGames: a
+        } = e.client;
+        return a[t] || !1
+      }
+      const T = e => e.client.privacyPopupRevision,
+        x = e => e.client.isAdsBlockedVisible,
+        R = (0, o.Mz)((e => e.client.consentStatus), C, I, ((e, t, a) => t || !a || e === n.T2)),
+        Z = e => e.client.asyncEpicFired,
+        K = e => e.client.trafficSource,
+        $ = () => {
+          var e;
+          const t = "undefined" != typeof window && (null === (e = window) || void 0 === e || null === (e = e.context) || void 0 === e || null === (e = e.session) || void 0 === e ? void 0 : e.id);
+          if (!t) return 100;
+          let a = 0;
+          for (let e = 0; e < t.length; e++) a += t.charCodeAt(e);
+          return a % 100
+        },
+        j = e => ["US", "BR"].includes(e.client.geo),
+        H = r
+    },
+    48554: (e, t, a) => {
+      a.d(t, {
+        Ay: () => se,
+        Br: () => S,
+        Co: () => I,
+        Kj: () => N,
+        QE: () => Z,
+        QX: () => $,
+        TQ: () => G,
+        UO: () => K,
+        cD: () => O,
+        gO: () => E,
+        h8: () => _,
+        iG: () => A,
+        iw: () => L,
+        kK: () => P,
+        kj: () => q,
+        lT: () => H,
+        lh: () => k,
+        m$: () => V,
+        on: () => F,
+        pT: () => U,
+        qA: () => T,
+        u9: () => B,
+        vA: () => z,
+        wZ: () => w,
+        wj: () => J,
+        x9: () => M,
+        yd: () => R,
+        yq: () => b,
+        zM: () => j
+      });
+      var s = a(20038),
+        o = a(8120),
+        n = a(90385),
+        i = a(42891),
+        c = a(89385),
+        r = a(15203),
+        l = a(40890),
+        d = a(13150),
+        u = a(46493),
+        g = a(67893),
+        m = a(17782),
+        p = a(16536),
+        y = a(73934),
+        v = a(83228);
+      const f = `${(0,a(46278).T5)()}/players/gamesave`,
+        h = (0, s.Z0)({
+          name: "game",
+          initialState: {
+            isFullscreen: !1,
+            wasFullscreen: !1,
+            showAdStatus: !1,
+            adStatusEvent: "",
+            adDuration: 0,
+            adCurrentTime: 0,
+            loadingFinished: !1
+          },
+          reducers: {
+            setFullscreen: (e, t) => {
+              e.isFullscreen = t.payload.toggle, e.wasFullscreen = e.wasFullscreen || t.payload.toggle
+            },
+            gameLoadingFinished: e => {
+              e.loadingFinished = !0
+            },
+            setPubHostData: (e, t) => {
+              const {
+                gameId: a,
+                data: s
+              } = t.payload;
+              e[a] = {
+                ...e[a],
+                pubHostData: s
+              }
+            },
+            showAdStatus: e => {
+              e.showAdStatus = !0
+            },
+            hideAdStatus: e => {
+              e.showAdStatus = !1
+            },
+            setAdStatusEvent: (e, t) => {
+              e.adStatusEvent = t.payload.event
+            },
+            setAdDurationAndProgress: (e, t) => {
+              e.adDuration = t.payload.duration, e.adCurrentTime = t.payload.currentTime
+            }
+          }
+        }),
+        S = (0, m.A)("game/boot"),
+        w = (0, m.A)("game/receive_game_event"),
+        b = (0, m.A)("game/receive_sdk_details"),
+        k = (0, m.A)("game/request_full_screen"),
+        A = (0, m.A)("game/pub_host_initialized"),
+        _ = (0, m.A)("game/set_poki_url_params"),
+        G = (0, m.A)("game/receive_command"),
+        P = (0, m.A)("game/generate_screenshot"),
+        B = (0, m.A)("game/receive_screenshot"),
+        F = (0, m.A)("game/fetch_save_game"),
+        C = (0, s.VP)("game/mutate_save_game"),
+        I = (0, m.A)("game/cloud_save_game_script_error"),
+        D = (0, m.A)("game/poki_accounts_open_auth_panel"),
+        {
+          setFullscreen: E,
+          gameLoadingFinished: M,
+          setPubHostData: L,
+          showAdStatus: z,
+          hideAdStatus: V,
+          setAdStatusEvent: O,
+          setAdDurationAndProgress: T
+        } = h.actions,
+        x = (0, o.Mz)(n.Vv, (e => e.game), ((e, t) => t[e && e.id] || {}));
+
+      function R(e) {
+        const t = x(e);
+        return (null == t ? void 0 : t.pubHostData) || null
+      }
+
+      function Z(e) {
+        const t = (0, n.Vv)(e);
+        return !(null == t || !t.fullscreen)
+      }
+      const K = (0, o.Mz)(n.Vv, i.zS, n.K5, r.Bi, ((e, t, a, s) => {
+          var o;
+          return "game" === a ? "flash" === (null == e || null === (o = e.file) || void 0 === o ? void 0 : o.render_type) || (null == e ? void 0 : e.alternative_game_enabled) || t && !(null != e && e.mobile_available) : "mystery" === a && !s
+        })),
+        $ = e => e.game.isFullscreen,
+        j = e => e.game.wasFullscreen,
+        H = e => e.game.showAdStatus,
+        N = e => e.game.adStatusEvent,
+        q = e => e.game.adDuration,
+        J = e => e.game.adCurrentTime,
+        U = e => e.game.loadingFinished,
+        W = {
+          pubHostInitialized: A,
+          [d.oQ]: w,
+          [d.Oi]: b,
+          [d.AU]: _,
+          [d.zR]: G,
+          [d.RC]: B,
+          [d.Kt]: D,
+          fetchSaveGame: F,
+          mutateSaveGame: C,
+          SaveGameMigrator: !0,
+          pokiLoader: !0
+        },
+        Q = ["localhost", "games.poki.com", "game-cdn.poki.com"],
+        X = ["pokiMessageEvent", "pokiMessageDebug", "SaveGameMigrator", "pokiLoader"],
+        Y = (0, g.KV)() ? "https://games.poki.com" : "*";
+
+      function ee({
+        event: e,
+        dispatch: t
+      }) {
+        const a = function({
+          event: e
+        }) {
+          const {
+            type: t
+          } = e.data || {};
+          if (!t || !W[t] || "function" != typeof W[t]) return !1;
+          const a = (0, l.aX)(e.origin) || "",
+            s = Q.includes(a) || a.endsWith(".poki-gdn.com") || window.location.origin === e.origin,
+            o = document.querySelector('iframe[name="gameFrame"]'),
+            n = o && o.src.startsWith(e.origin);
+          return s || n
+        }({
+          event: e
+        });
+        if (!a) return;
+        const {
+          content: s,
+          type: o
+        } = e.data;
+        if (X.includes(o) && function({
+            type: e,
+            content: t
+          }) {
+            (0, u.F)({
+              category: "sdk",
+              action: "message",
+              data: {
+                content: t,
+                type: e
+              }
+            }), window.parent !== window && window.parent.postMessage({
+              type: e,
+              content: t
+            }, Y)
+          }({
+            type: o,
+            content: s
+          }), "function" == typeof W[o]) {
+          const a = e.source;
+          t(W[o]({
+            ...s,
+            source: a
+          }))
+        }
+      }(0, p.Zv)({
+        type: i.Xy.type,
+        effect: (e, t) => {
+          const {
+            dispatch: a
+          } = t;
+          void 0 !== window.pokiMessageListener && window.removeEventListener("message", window.pokiMessageListener), window.pokiMessageBuffer && window.pokiMessageBuffer.forEach((e => {
+            ee({
+              event: e,
+              dispatch: a
+            })
+          })), window.addEventListener("message", (e => {
+            ee({
+              event: e,
+              dispatch: a
+            })
+          }))
+        }
+      });
+      const te = (0, s.zD)("game/push_save_game_to_cloud", (async ({
+        gameID: e,
+        saveGameData: t
+      }, a) => {
+        const s = parseInt(localStorage.getItem(`playtime-${e}`) || "0", 10),
+          o = t.playtime + s;
+        try {
+          const s = JSON.stringify({
+              game_id: e,
+              playtime: o,
+              data: {
+                ls: t.ls,
+                idb: t.idb
+              }
+            }),
+            n = new Blob([s]).size;
+          let i = s,
+            r = n,
+            l = 1;
+          try {
+            i = await (0, y.B)(s), r = i.size, l = r / n
+          } catch (e) {
+            console.error(e)
+          }
+          if (console.info(`[SaveGame] Compression results - Original: ${n/1024}KB, Compressed: ${r/1024}KB, Compression ratio: ${(100*l).toFixed(2)}% of the original size`), r > v.Im) return console.error(`[SaveGame] Game file is too large after compression ${r/1048576}mb`), (0, u.F)({
+            category: "account",
+            action: "gamesaveSizeTooLarge",
+            data: {
+              gameId: e,
+              size: r,
+              originalSize: n,
+              compressionRatio: l
+            }
+          }), void a.dispatch((0, c.hK)({
+            gameID: e,
+            saveGameSize: r
+          }));
+          const d = await fetch(f, {
+            method: "POST",
+            body: i,
+            credentials: "include"
+          });
+          if (201 !== d.status) throw new Error(`Failed to save user games. ${d.status}: ${d.statusText}`);
+          (0, u.F)({
+            category: "account",
+            action: "gamesaveSuccess",
+            data: {
+              gameId: e,
+              size: r,
+              originalSize: n,
+              compressionRatio: l
+            }
+          });
+          const g = new Date;
+          console.info(`[SaveGame] cloud sync - game: ${e}, at: ${g.toLocaleString()}`)
+        } catch (t) {
+          console.error("[SaveGame] error pushing to cloud", t), (0, u.F)({
+            category: "account",
+            action: "gamesaveError",
+            data: {
+              gameId: e,
+              method: "pushSaveGameToCloud",
+              context: "sending gamesave to the cloud",
+              error: t instanceof Error ? t.message : String(t)
+            }
+          })
+        } finally {
+          localStorage.setItem(`playtime-${e}`, o.toString())
+        }
+      }));
+      (0, p.Zv)({
+        type: C.type,
+        effect: (e, t) => {
+          var a;
+          const s = t.getState(),
+            o = null === (a = (0, n.Vv)(s)) || void 0 === a ? void 0 : a.id,
+            i = (0, c.Ep)(s),
+            r = (0, c.Fh)(s);
+          if (!i || !o || r.includes(o)) return;
+          if ((0, v.jJ)(e.payload)) return;
+          const l = {
+            playtime: parseInt(e.payload.playtimeInterval || "0", 10),
+            ls: e.payload.ls || "",
+            idb: e.payload.idb || ""
+          };
+          t.dispatch(te({
+            gameID: o,
+            saveGameData: l
+          }))
+        }
+      });
+      const ae = Math.random().toString(36).substring(2);
+      (0, p.Zv)({
+        actionCreator: c.hK,
+        effect: (e, t) => {
+          const {
+            saveGameSize: a
+          } = e.payload, s = R(t.getState()), {
+            gameID: o,
+            gameVersion: n
+          } = s || {}, i = {
+            name: "LargeGameSave",
+            message: `Game state of ${(a/1024/1024).toFixed(2)}MB is too large to sync to Poki User Account (max 1MB allowed)`
+          }, c = JSON.stringify({
+            gid: o,
+            vid: n,
+            ve: 7,
+            n: i.name,
+            m: i.message,
+            ui: ae
+          });
+          fetch("https://t.poki.io/ge", {
+            method: "POST",
+            body: c
+          })
+        }
+      }), (0, p.Zv)({
+        type: D.type,
+        effect: (e, t) => {
+          const a = t.getState();
+          (0, c.ij)(a) || t.dispatch((0, c.qf)())
+        }
+      });
+      const se = h
+    },
+    15203: (e, t, a) => {
+      a.d(t, {
+        Ay: () => m,
+        Bi: () => u,
+        ON: () => y,
+        QZ: () => d,
+        ht: () => g
+      });
+      var s = a(20038),
+        o = a(42891),
+        n = a(61481),
+        i = a(90385),
+        c = a(11436),
+        r = a(16536);
+      const l = (0, s.Z0)({
+          name: "mystery",
+          initialState: {
+            game: null,
+            games: [],
+            triggered: !1,
+            canBeShown: !1
+          },
+          reducers: {
+            setMysteryGames: (e, t) => {
+              e.games = t.payload.games, e.triggered = !1
+            },
+            setCanBeShown: (e, t) => {
+              e.canBeShown = t.payload.canBeShown, e.game = t.payload.game
+            },
+            clickMysteryGame: e => {
+              e.game = null, e.games = [], e.triggered = !0, e.canBeShown = !1
+            }
+          }
+        }),
+        d = e => e.mystery.game,
+        u = e => e.mystery.triggered,
+        g = e => e.mystery.canBeShown,
+        m = l,
+        {
+          setMysteryGames: p,
+          clickMysteryGame: y,
+          setCanBeShown: v
+        } = l.actions;
+      let f = !1;
+      "undefined" != typeof window && ((0, r.Zv)({
+        actionCreator: o.Xy,
+        effect: async (e, {
+          getState: t,
+          dispatch: a,
+          unsubscribe: s,
+          condition: n
+        }) => {
+          const i = t(),
+            r = (0, o.wu)(i),
+            l = (0, o.xp)(i),
+            d = (0, c.fn)(i),
+            u = function(e, t) {
+              var a, s, o;
+              return "true" === new URLSearchParams(t).get("force_mystery") || !["GB", "NL", "CA"].includes(e) && ((null === (a = navigator) || void 0 === a || null === (a = a.connection) || void 0 === a || !a.effectiveType || "4g" === (null === (s = navigator) || void 0 === s || null === (s = s.connection) || void 0 === s ? void 0 : s.effectiveType)) && (!((null === (o = navigator) || void 0 === o ? void 0 : o.hardwareConcurrency) < 8) && !!document.createElement("canvas").getContext("webgl2", {
+                failIfMajorPerformanceCaveat: !0
+              })))
+            }(r, d);
+          if (f = u, s(), f) {
+            const e = async () => {
+              try {
+                const e = await fetch(`https://mystery-game-tile.poki.io/v0/mystery-game?device=${l}&geo=${r}`),
+                  t = (await e.json()).filter((e => {
+                    const {
+                      device_category: t
+                    } = e;
+                    return t === l || "any" === t
+                  }));
+                if (0 === t.length) return void a(p({
+                  games: []
+                }));
+                const s = t.map((e => {
+                  const t = btoa(`${e.path}/${e.orientation||"both"}`);
+                  return {
+                    ...e,
+                    path: t
+                  }
+                }));
+                a(p({
+                  games: s
+                }))
+              } catch (e) {}
+            };
+            "function" == typeof requestIdleCallback ? requestIdleCallback(e, {
+              timeout: 1e4
+            }) : e();
+            const t = setInterval(e, 3e5);
+            await n(y.match), clearInterval(t)
+          }
+        }
+      }), (0, r.Zv)({
+        matcher: (0, s.i0)(n.lh.endpoints.getGame.matchFulfilled, n.lh.endpoints.getCategory.matchFulfilled, n.lh.endpoints.getHomepage.matchFulfilled),
+        effect: (e, {
+          getState: t,
+          dispatch: a,
+          unsubscribe: s
+        }) => {
+          const o = t();
+          if (!f) return void s();
+          const n = (e => e.mystery.games)(o);
+          if (n.length > 0) {
+            const e = (0, i.K5)(o),
+              t = (0, i.Vv)(o),
+              s = (0, i.N2)(o),
+              c = (0, i.Qk)(o);
+            if ("category" === e && 0 === s.games.length) return void a(v({
+              canBeShown: !1,
+              game: null
+            }));
+            const r = n.filter((a => {
+              const {
+                categories: o = []
+              } = a;
+              return 0 === o.length || ("game" === e ? t.categories.some((({
+                id: e
+              }) => o.includes(e))) : "category" === e && o.includes(s.id))
+            }));
+            if (0 === r.length) return void a(v({
+              canBeShown: !1,
+              game: null
+            }));
+            let l = 0;
+            for (let e = 0; e < c.length; e++) l += c.charCodeAt(e);
+            a(v({
+              canBeShown: !0,
+              game: r[l % r.length]
+            }))
+          }
+        }
+      }))
+    },
+    91323: (e, t, a) => {
+      a.d(t, {
+        Ay: () => f,
+        DF: () => y,
+        Gd: () => m,
+        LJ: () => i,
+        n: () => p
+      });
+      var s = a(20038),
+        o = a(8120),
+        n = a(40890);
+      const i = {
+          WEB: "web",
+          APP: "app"
+        },
+        c = {
+          mode: i.WEB
+        },
+        r = (0, s.Z0)({
+          name: "site",
+          initialState: c,
+          reducers: {
+            setSite: (e, t) => {
+              e.site = t.payload.site
+            },
+            setSitesForClient: (e, t) => {
+              e.sites = t.payload.sites
+            },
+            setLocalisations: (e, t) => {
+              e.localisations = t.payload.localisations
+            },
+            setSiteMode: (e, t) => {
+              e.mode = t.payload.mode
+            }
+          }
+        }),
+        {
+          setSite: l,
+          setSitesForClient: d,
+          setLocalisations: u,
+          setSiteMode: g
+        } = r.actions,
+        m = e => e.site.site,
+        p = e => e.site.sites,
+        y = e => e.site.mode,
+        v = ((0, o.Mz)(m, (({
+          paths: e
+        }) => ({
+          ...n.KJ,
+          ...e
+        }))), ["ar", "he"]),
+        f = ((0, o.Mz)(m, (({
+          iso_lang: e
+        }) => v.includes(e))), r)
+    }
+  }
+]);
+//# sourceMappingURL=client~main-9b68f587~55d4c071c60a898b62ec.js.map

@@ -1,0 +1,88 @@
+"use strict";
+(self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([
+  [9935], {
+    41266: (e, t, n) => {
+      n.r(t), n.d(t, {
+        default: () => u
+      });
+      var a = n(17402),
+        r = n(80243),
+        o = n(34164),
+        s = n(21043),
+        i = n(95901);
+      const l = (0, r.Ay)({
+        resolved: {},
+        chunkName: () => "app-components-svg-SVGIcon-tsx",
+        isReady(e) {
+          const t = this.resolve(e);
+          return !0 === this.resolved[t] && !!n.m[t]
+        },
+        importAsync: () => n.e(4810).then(n.bind(n, 91833)),
+        requireAsync(e) {
+          const t = this.resolve(e);
+          return this.resolved[t] = !1, this.importAsync(e).then((e => (this.resolved[t] = !0, e)))
+        },
+        requireSync(e) {
+          const t = this.resolve(e);
+          return n(t)
+        },
+        resolve() {
+          return 91833
+        }
+      });
+
+      function u({
+        id: e,
+        iconName: t,
+        text: n = "",
+        hoverText: r = "",
+        isHighlighted: u = !1,
+        inverted: c = !1,
+        onClick: _,
+        preventFocus: h = !1
+      }) {
+        const [B, d] = (0, a.useState)(!1), [m, v] = (0, a.useState)(!0), [g, A] = (0, a.useState)(0), D = h ? e => e.preventDefault() : void 0;
+        return (0, i.FD)("button", {
+          className: (0, o.A)(s.gameBarButton, {
+            [s.gameBarButton_isHighlighted]: u,
+            [s.gameBarButton_inverted]: c,
+            [s.gameBarButton_interacted]: B,
+            [s.gameBarButton_pointerLeft]: m
+          }),
+          onClick: () => {
+            g + 500 > Date.now() || (A(Date.now()), _())
+          },
+          onPointerDown: () => {
+            d(!0), v(!1), h && _()
+          },
+          onPointerLeave: () => {
+            v(!0)
+          },
+          onMouseDown: D,
+          onTouchStart: D,
+          type: "button",
+          id: e,
+          children: [(0, i.Y)("div", {
+            className: s.gameBarButton__innerContainer,
+            children: (0, i.Y)(l, {
+              className: s.gameBarButton__icon,
+              name: t,
+              height: "24",
+              width: "24"
+            })
+          }), (0, i.FD)("div", {
+            className: s.gameBarButton__labelContainer,
+            children: [(0, i.Y)("span", {
+              className: (0, o.A)(s.gameBarButton__label, s.gameBarButton__label_default),
+              children: n
+            }), (0, i.Y)("span", {
+              className: (0, o.A)(s.gameBarButton__label, s.gameBarButton__label_hover),
+              children: r
+            })]
+          })]
+        })
+      }
+    }
+  }
+]);
+//# sourceMappingURL=client~app-components-GameBarButton~772830273eb1184bfde1.js.map
