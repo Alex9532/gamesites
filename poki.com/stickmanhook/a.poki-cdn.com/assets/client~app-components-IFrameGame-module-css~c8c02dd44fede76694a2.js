@@ -1,0 +1,2 @@
+"use strict";(self.__LOADABLE_LOADED_CHUNKS__=self.__LOADABLE_LOADED_CHUNKS__||[]).push([[4047],{67544:(_,A,s)=>{s.r(A),s.d(A,{iframe:()=>D});var D="Clsn52HE2ZzhoBMbiAF6"}}]);
+//# sourceMappingURL=client~app-components-IFrameGame-module-css~c8c02dd44fede76694a2.js.map
